@@ -89,13 +89,14 @@ export class ViewEmployeeComponent implements OnInit, OnDestroy {
   }
   // Initialize the data source
   dataSource!: MatTableDataSource<any>;
-  employees = [];
+  employees: any[] = [];
 
   // Fetch employee data from the service
   getEmployeeData() {
     this._employeeService.getEmployee().subscribe({
       next: (res: any) => {
         this.employees = res;
+        console.log(this.employees);
         // Create a new MatTableDataSource with the fetched data
         this.dataSource = new MatTableDataSource(res);
 

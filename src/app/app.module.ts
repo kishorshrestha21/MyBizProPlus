@@ -28,6 +28,7 @@ import { Test2Component } from './test2/test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
+import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { IdTest2Component } from './test2/id-test2/id-test2.component';
     AddTest2Component,
     ViewTest2Component,
     IdTest2Component,
+    DetailEmployeeComponent,
   ],
   imports: [
     BrowserModule,

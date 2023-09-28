@@ -48,3 +48,17 @@ body {
   box-sizing: border-box;
   padding: 0;
 }
+
+:root {
+  --cardBackground: #5c75dbdb;
+  --borderR: 5px;
+}
+
+.contentWrap {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+}

@@ -1,3 +1,28 @@
+<div class="contentWrap">
+  <div class="empCard">
+    <div class="empBody" *ngFor="let employee of employees">
+      <div class="empBox">
+        <img
+          src="{{ employee.employeeIdentity.photo }}"
+          alt=""
+          class="empImg"
+        />
+        <h3>
+          {{
+            employee.employeeDetail.firstname +
+              " " +
+              employee.employeeDetail.lastname | titlecase
+          }}
+        </h3>
+        <p>{{ "Phone No: " + employee.employeeDetail.phone }}</p>
+      </div>
+      <div class="profilefooter">
+        <button mat-raised-button>Detail</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="viewemployee">
   <mat-form-field>
     <mat-label>Filter</mat-label>
