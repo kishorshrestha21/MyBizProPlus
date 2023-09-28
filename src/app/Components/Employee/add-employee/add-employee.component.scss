@@ -1,0 +1,110 @@
+.addEmployeeWrap {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.addEmployee {
+}
+
+.formGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+.invalid {
+  color: red;
+}
+
+.AddressFormGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.employeeIdentity {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.passwordField {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emergencyContact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.fileButton {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.closeButton {
+  background-color: white;
+  height: 20px;
+}
+.fileButton button {
+  width: 100%;
+}
+.closeButton .icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  background-color: white;
+  color: red;
+  height: 55px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.submitBtn {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  column-gap: 10px;
+  button {
+    flex: 1;
+    height: 55px;
+    font-size: 1rem;
+  }
+}
+
+.saveEmployeeBtn {
+  background-color: green;
+  color: white;
+}
+
+.mat-radio-group.ng-invalid.ng-touched .mat-radio-outer-circle {
+  border-color: red;
+}
+.mat-radio-group.ng-invalid.ng-touched .mat-radio-label-content {
+  color: #f44336;
+  border-bottom: 2px solid #f44336;
+}
+
+.imageSize img {
+  height: 55px !important;
+  border-radius: 5px;
+  max-width: 100px;
+}
+
+.fileButton {
+  display: flex;
+  column-gap: 5px;
+}

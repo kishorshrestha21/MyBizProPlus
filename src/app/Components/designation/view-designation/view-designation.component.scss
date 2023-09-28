@@ -1,0 +1,42 @@
+.addDesignationLink {
+  position: fixed;
+  top: 4.5rem;
+  right: 10px;
+  z-index: 100;
+}
+
+table {
+  width: 100%;
+  margin: auto;
+  // box-shadow: 1px 10px 10px 1px rgba(39, 38, 38, 0.567);
+  border-collapse: collapse;
+  border: 5px;
+  overflow: scroll;
+}
+
+th {
+  //   background-color: rgb(104, 96, 96);
+  //   color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: 400;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  font-weight: 100;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.wrap {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+}

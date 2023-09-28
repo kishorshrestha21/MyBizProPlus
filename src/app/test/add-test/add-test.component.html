@@ -1,0 +1,29 @@
+<div class="testForm">
+  <form [formGroup]="newMemberForm" (ngSubmit)="onSave()">
+    <div class="formGroup" formGroupName="memberDetail">
+      <mat-form-field appearance="outline">
+        <mat-label> First Name</mat-label>
+        <input type="text" matInput formControlName="fname" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Last Name</mat-label>
+        <input type="text" matInput formControlName="lname" />
+      </mat-form-field>
+
+      <input
+        type="file"
+        (change)="newUploadFile($event)"
+        formControlName="image"
+      />
+
+      <img
+        *ngIf="displayedImageUrl"
+        [src]="displayedImageUrl"
+        alt="Member Image"
+        style="width: 100px"
+      />
+    </div>
+    <button mat-raised-button color="primary">Save</button>
+    <!-- <button type="button" (click)="updateMember()">Update</button> -->
+  </form>
+</div>

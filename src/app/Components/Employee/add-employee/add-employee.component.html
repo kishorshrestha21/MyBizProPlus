@@ -1,0 +1,310 @@
+<div class="addEmployeeWrap">
+  <div class="addEmployee">
+    <form
+      action=""
+      [formGroup]="employeeForm"
+      (ngSubmit)="onSubmit()"
+      #f="ngForm"
+    >
+      <div class="formGroup" formGroupName="employeeDetail">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="First Name"
+            formControlName="firstname"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Middle Name"
+            formControlName="middlename"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Last Name"
+            formControlName="lastname"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone No</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Phone No"
+            formControlName="phone"
+          />
+        </mat-form-field>
+
+        <mat-radio-group aria-label="Select an option" formControlName="gender">
+          <label
+            for="gender"
+            [ngClass]="{
+              invalid:
+                employeeForm.get('employeeDetail.gender')?.invalid &&
+                employeeForm.get('employeeDetail.gender')?.touched
+            }"
+            >Gender*</label
+          >
+          <br />
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="AddressFormGroup" formGroupName="employeeAddress">
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Address"
+            formControlName="address"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Appartment No</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="Appartment No"
+            formControlName="appartment"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="City"
+            formControlName="city"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select formControlName="state" placeholder=" Select Stater">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let state of states" [value]="state">{{
+              state
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Zipcode</mat-label>
+          <input
+            type="text"
+            matInput
+            placeholder="zipcode"
+            formControlName="zipCode"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="employeeIdentity" formGroupName="employeeIdentity">
+        <mat-form-field appearance="outline">
+          <mat-label>designation</mat-label>
+          <mat-select
+            formControlName="designation"
+            multiple
+            placeholder="Select Designation"
+          >
+            <!-- <mat-select-trigger>
+              {{ employeeForm.get('employeeIdentity.designation').value?.[0] || '' }}
+              <span
+                *ngIf="
+                  (employeeForm.get('employeeIdentity.designation').value
+                    ?.length || 0) > 1
+                "
+                class="example-additional-selection"
+              >
+                (+{{
+                  (employeeForm.get("employeeIdentity.designation").value
+                    ?.length || 0) - 1
+                }}
+                {{
+                  employeeForm.get("employeeIdentity.designation").value
+                    ?.length === 2
+                    ? "other"
+                    : "others"
+                }})
+              </span>
+            </mat-select-trigger> -->
+
+            <!-- <mat-option
+              *ngFor="let designation of designations"
+              [value]="designation"
+            >
+              {{ designation }}
+            </mat-option> -->
+
+            <mat-option
+              *ngFor="let designation of designations"
+              [value]="designation.designation"
+            >
+              {{ designation.designation }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Level</mat-label>
+          <mat-select formControlName="level" placeholder="Level" l>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let level of levels" [value]="level">
+              {{ level }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="fileButton">
+          <button
+            mat-raised-button
+            color="primary"
+            type="button"
+            (click)="fileInput.click()"
+            [value]="fileName"
+            style="height: 55px"
+          >
+            <mat-icon>attach_file</mat-icon>
+            <span>{{ fileName ? fileName : photoName }}</span>
+          </button>
+          <span class="closeButton">
+            <mat-icon
+              (click)="deleteFile(fileInput)"
+              class="icon"
+              *ngIf="fileName"
+              >closed
+            </mat-icon>
+          </span>
+
+          <input
+            hidden
+            type="file"
+            #fileInput
+            (change)="onFileChange($event)"
+            formControlName="photo"
+          />
+          <div *ngIf="displayedPhoto" class="imageSize">
+            <img [src]="displayedPhoto" alt="Member Image" />
+          </div>
+        </div>
+
+        <div class="fileButton">
+          <button
+            type="button"
+            mat-raised-button
+            color="primary"
+            (click)="idFileInput.click()"
+            [value]="idFileName"
+            style="height: 55px"
+          >
+            <mat-icon>attach_file</mat-icon>
+            <span>{{ idFileName ? idFileName : iDName }}</span>
+          </button>
+          <span class="closeButton">
+            <mat-icon
+              (click)="deleteIdFile(idFileInput)"
+              class="icon"
+              *ngIf="idFileName"
+              >close
+            </mat-icon>
+          </span>
+
+          <input
+            hidden
+            type="file"
+            #idFileInput
+            (change)="onIdFileChange($event)"
+            formControlName="idCard"
+          />
+
+          <div *ngIf="displayedIdCard" class="imageSize">
+            <img [src]="displayedIdCard" />
+          </div>
+        </div>
+      </div>
+
+      <div class="passwordField" formGroupName="passwordField">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="changeType ? 'password' : 'text'"
+            formControlName="password"
+          />
+
+          <mat-icon matSuffix (click)="viewPassword()">{{
+            visible ? "visibility" : "visibility_offq"
+          }}</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Passsword</mat-label>
+          <input
+            matInput
+            [type]="changeType ? 'password' : 'text'"
+            formControlName="confirmPassword"
+          />
+
+          <mat-icon matSuffix (click)="viewPassword()">{{
+            visible ? "visibility" : "visibility_offq"
+          }}</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="emergenceWrap">
+        <p style="text-align: center">Emeregency Contact</p>
+        <div class="emergencyContact" formGroupName="emergencyContact">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" formControlName="eFirstName" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" formControlName="eLastName" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" formControlName="ePhoneNo" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Relation</mat-label>
+            <input matInput type="text" formControlName="eRelation" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="submitBtn">
+        <button type="button" mat-raised-button color="warn">Cancle</button>
+        <button mat-raised-button class="saveEmployeeBtn">
+          {{ submitText }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

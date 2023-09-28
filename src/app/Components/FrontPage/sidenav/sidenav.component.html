@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <div class="search">
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+      <input type="search" matInput [(ngModel)]="searchText" />
+    </mat-form-field>
+  </div>
+
+  <div *ngFor="let menu of menus | filter : searchText">
+    <div class="menuGroup" routerLinkActive="active">
+      <a routerLink="{{ menu.link }}"
+        ><mat-icon>{{ menu.icon }}</mat-icon
+        >{{ menu.name }}</a
+      >
+    </div>
+  </div>
+</div>

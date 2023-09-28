@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="header">
+    <div class="headerWrap">
+      <mat-toolbar color="primary">
+        <div (click)="hamMenu()" class="ham">
+          <mat-icon>menu</mat-icon>
+        </div>
+
+        <span>My App</span>
+        <span class="example-spacer"></span>
+
+        <h1>{{ headerTitle }}</h1>
+        <span class="example-spacer"></span>
+        <div class="right">
+          <mat-icon>favorite</mat-icon>
+          <mat-icon>share</mat-icon>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <div class="sidenav" [class.activeSidenav]="headerActive">
+    <app-sidenav></app-sidenav>
+  </div>
+
+  <div class="content" [class.activeContent]="headerActive">
+    <app-content> </app-content>
+  </div>
+</div>

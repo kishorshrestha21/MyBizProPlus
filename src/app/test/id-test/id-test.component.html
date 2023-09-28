@@ -1,0 +1,11 @@
+<div *ngIf="newMemberByIds">
+  <ul *ngFor="let newMemberId of newMemberByIds; index as i">
+    <li>{{ newMemberId.id }}</li>
+    <li>{{ newMemberId.memberDetail.fname }}</li>
+    <img
+      src="{{ newMemberId.memberDetail.image }}"
+      alt="hello"
+      style="width: 40px"
+    />
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+<div class="addDesignationLink">
+  <button mat-raised-button color="accent" (click)="openAddDesignation()">
+    Add Designation
+  </button>
+</div>
+<div class="wrap">
+  <div class="designationList">
+    <table>
+      <thead>
+        <th>S.no</th>
+        <th>Designation</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let designation of designations; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ designation.designation }}</td>
+          <td>
+            <button
+              mat-icon-button
+              (click)="navigateToAddDesignation(designation)"
+            >
+              <mat-icon color="primary">edit</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              (click)="onDeleteDesignation(designation.id)"
+            >
+              <mat-icon color="warn">delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

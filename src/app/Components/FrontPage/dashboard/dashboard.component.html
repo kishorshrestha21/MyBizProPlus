@@ -1,0 +1,75 @@
+<!-- <div class="testForm">
+  <form [formGroup]="memberForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="fname" /><br /><br />
+    <input type="text" formControlName="lname" /><br /><br />
+    <input
+      type="file"
+      (change)="ulploadFile($event)"
+      formControlName="image"
+    /><br /><br />
+    <button>Save</button>
+  </form>
+</div>
+
+<div class="memberList">
+  <ul *ngFor="let member of members">
+    <li>{{ member.fname }}</li>
+    <li>{{ member.lname }}</li>
+    <div class="image">
+      <img src="{{ member.image }}" alt="" />
+    </div>
+  </ul>
+</div> -->
+
+<div class="testForm">
+  <form [formGroup]="newMemberForm" (ngSubmit)="onSave()">
+    <div class="formGroup" formGroupName="memberDetail">
+      <input type="text" formControlName="fname" /><br /><br />
+      <input type="text" formControlName="lname" /><br /><br />
+      <input
+        type="file"
+        (change)="newUploadFile($event)"
+        formControlName="image"
+      /><br /><br />
+      <!-- <img
+        *ngIf="displayedImageUrl"
+        [src]="displayedImageUrl"
+        alt="Member Image"
+      /> -->
+    </div>
+    <button>Save</button>
+    <button type="button" (click)="updateMember()">Update</button>
+  </form>
+</div>
+
+<div class="memberList">
+  <ul *ngFor="let newMember of newMembers">
+    <li>{{ newMember.id }}</li>
+    <li>{{ newMember.memberDetail.fname }}</li>
+    <li>{{ newMember.memberDetail.lname }}</li>
+    <img src="{{ newMember.memberDetail.image }}" alt="hello" />
+    <button mat-icon-button (click)="editMember(newMember)">
+      <mat-icon color="primary">edit</mat-icon>
+    </button>
+
+    <button mat-icon-button (click)="deleteMember(newMember.id)">
+      <mat-icon color="warn">delete</mat-icon>
+    </button>
+  </ul>
+</div>
+
+<!-- <div class="memberList">
+  <ul *ngFor="let newMember of newMembers">
+    <li *ngIf="newMember?.memberDetail">
+      {{ newMember.memberDetail.fname }}
+    </li>
+    <li *ngIf="newMember?.memberDetail">
+      {{ newMember.memberDetail.lname }}
+    </li>
+    <img
+      *ngIf="newMember?.memberDetail"
+      src="{{ newMember.memberDetail.image }}"
+      alt="hello"
+    />
+  </ul>
+</div> -->

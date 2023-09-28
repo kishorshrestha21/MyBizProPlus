@@ -1,0 +1,30 @@
+<div class="addDesignation">
+  <div class="dgHead">
+    <p>Designation Form</p>
+  </div>
+
+  <!-- <div mat-dialog-title>
+    <p>Designation Form</p>
+  </div> -->
+  <form [formGroup]="designationForm" (ngSubmit)="dgSave()">
+    <div mat-dialog-content class="dgform">
+      <mat-form-field appearance="outline">
+        <mat-label>Designation</mat-label>
+        <input type="text" matInput formControlName="designation" />
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button
+        mat-raised-button
+        color="warn"
+        type="button"
+        mat-dialog-close="false"
+      >
+        Cancel
+      </button>
+      <button mat-raised-button color="primary">
+        {{ _data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>

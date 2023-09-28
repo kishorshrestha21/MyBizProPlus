@@ -1,0 +1,48 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  position: relative;
+}
+.ham {
+  cursor: pointer;
+}
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.sidenav {
+  width: 240px;
+  top: 7rem;
+  left: 0;
+  position: fixed;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.074) 1.5px 1.95px 10px;
+  box-sizing: border-box;
+}
+
+.activeSidenav {
+  width: 60px;
+  transition: 0.3s;
+}
+
+.content {
+  position: absolute;
+  top: 4rem;
+  left: 240px;
+  width: calc(100% - 240px);
+  transition: 0.3s;
+
+  box-sizing: border-box;
+}
+.activeContent {
+  left: 60px;
+  width: calc(100% - 60px);
+  transition: 0.3s;
+}

@@ -1,0 +1,30 @@
+.contentWrap {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+}
+.contenthead {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 10px -6px;
+  width: calc(100%);
+  background-color: white;
+  padding: 8px;
+  z-index: 99;
+  overflow-x: scroll;
+}
+.roterOutlet {
+  margin-top: 4rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  // overflow: hidden;
+}
+
+.linkBtn {
+  display: flex;
+  justify-content: end;
+  margin-right: 1rem;
+}

@@ -1,0 +1,39 @@
+.addDesignation {
+  width: 50vh;
+}
+.addDesignation {
+  width: 100%;
+}
+.designationLink {
+  position: fixed;
+  top: 4.5rem;
+  right: 10px;
+  z-index: 100;
+}
+
+.dgform {
+  padding-top: 10px;
+  margin-top: 40px;
+}
+
+.dgHead {
+  max-height: 35px;
+  // margin-top: -10px;
+  text-align: center;
+  background-color: #3f51b5;
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.dgHead p {
+  line-height: 5px;
+}
+
+.action {
+  padding: 0px 20px 25px;
+  button {
+    flex: 1;
+  }
+}

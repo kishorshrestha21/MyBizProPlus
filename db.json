@@ -1,0 +1,66 @@
+{
+  "designation": [
+    {
+      "designation": "test",
+      "id": 2
+    },
+    {
+      "designation": "test2",
+      "id": 3
+    }
+  ],
+  "newMember": [
+    {
+      "memberDetail": {
+        "fname": "s",
+        "lname": "s",
+        "image": "C:\\fakepath\\img.7jpg.jpg"
+      }
+    }
+  ],
+  "employee": [],
+  "member": [
+    {
+      "fname": "Test",
+      "lname": "test",
+      "image": "C:\\fakepath\\71Q5ZhQxgFL._AC_SX569_.jpg",
+      "id": 1
+    },
+    {
+      "fname": "qq",
+      "lname": "qq",
+      "image": "C:\\fakepath\\71Q5ZhQxgFL._AC_SX569_.jpg",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "fname": "s",
+      "lname": "s",
+      "image": "C:\\fakepath\\71Q5ZhQxgFL._AC_SX569_.jpg",
+      "id": 5
+    },
+    {
+      "fname": "aa",
+      "lname": "aa",
+      "image": "C:\\fakepath\\71Q5ZhQxgFL._AC_SX569_.jpg",
+      "id": 6
+    },
+    {
+      "fname": "k",
+      "lname": "m",
+      "image": "C:\\fakepath\\71Q5ZhQxgFL._AC_SX569_.jpg",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+}

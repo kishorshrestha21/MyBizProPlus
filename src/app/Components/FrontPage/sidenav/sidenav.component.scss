@@ -1,0 +1,54 @@
+.sidenav {
+  margin-top: 1rem;
+}
+.search {
+  padding: 10px;
+}
+// ===============Material==================
+.search
+  ::ng-deep
+  .mat-mdc-text-field-wrapper.mdc-text-field--outlined
+  .mat-mdc-form-field-infix {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+.search::ng-deep .mat-mdc-form-field-infix {
+  min-height: 14px !important;
+}
+.search::ng-deep
+  .mdc-text-field:not(.mdc-text-field-disabled)
+  .mdc-floating-label {
+  // color: red !important;
+  top: 17px !important;
+}
+// x==========================
+.menuGroup {
+  padding: 8px;
+}
+
+.menuGroup:hover {
+  color: #3f51b5;
+  background-color: rgb(59 130 246 / 0.1);
+}
+
+mat-icon {
+  min-width: 3rem;
+  color: #383737d4;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  color: #383737d4;
+  margin-left: 0.6rem;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.active {
+  background-color: rgba(96, 83, 242, 0.115);
+}
+.active a,
+.active mat-icon {
+  color: #3f51b5;
+}

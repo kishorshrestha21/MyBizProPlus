@@ -1,0 +1,34 @@
+<table>
+  <th>S.No</th>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Last Name</th>
+  <th>Image</th>
+  <th>Action</th>
+  <tbody>
+    <tr *ngFor="let newMember of newMembers; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ newMember.id }}</td>
+      <td>{{ newMember.memberDetail.fname }}</td>
+      <td>{{ newMember.memberDetail.lname }}</td>
+      <td>
+        <img
+          src="{{ newMember.memberDetail.image }}"
+          alt="hello"
+          style="width: 40px"
+        />
+      </td>
+      <td>
+        <button mat-icon-button (click)="navigateToAddEmployee(newMember)">
+          <mat-icon color="primary">edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deletEmployeeById(newMember.id)">
+          <mat-icon color="warn">delete</mat-icon>
+        </button>
+
+        <button mat-icon-button routerLink="{{ newMember.id }}">detail</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+x
