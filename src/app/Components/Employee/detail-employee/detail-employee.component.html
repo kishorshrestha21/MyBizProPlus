@@ -1,1 +1,10 @@
-<p>detail-employee works!</p>
+<div *ngFor="let employeeDetailData of employeeDetailDatas">
+  <p>{{ employeeDetailData.id }}</p>
+  <h3>
+    {{
+      employeeDetailData.employeeDetail.firstname +
+        " " +
+        employeeDetailData.employeeDetail.lastname | titlecase
+    }}
+  </h3>
+</div>

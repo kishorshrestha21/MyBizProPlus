@@ -1,6 +1,7 @@
 <div class="contentWrap">
   <div class="empCard">
     <div class="empBody" *ngFor="let employee of employees">
+      <p>{{ employee.id }}</p>
       <div class="empBox">
         <img
           src="{{ employee.employeeIdentity.photo }}"
@@ -17,7 +18,13 @@
         <p>{{ "Phone No: " + employee.employeeDetail.phone }}</p>
       </div>
       <div class="profilefooter">
-        <button mat-raised-button>Detail</button>
+        <button mat-raised-button routerLink="{{ employee.id }}">Detail</button>
+        <button
+          mat-raised-button
+          [routerLink]="['/employee/detail-employee', employee.id]"
+        >
+          Detail
+        </button>
       </div>
     </div>
   </div>

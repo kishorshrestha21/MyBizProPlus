@@ -34,24 +34,23 @@ const routes: Routes = [
     component: EmployeeComponent,
     children: [
       { path: 'view-employee', component: ViewEmployeeComponent },
-      { path: 'add-employee/:id', component: AddEmployeeComponent },
+      { path: 'detail-employee/:abc', component: DetailEmployeeComponent },
       { path: 'add-employee', component: AddEmployeeComponent },
-      { path: 'detail-employee/:id', component: DetailEmployeeComponent },
-      { path: '', component: ViewEmployeeComponent },
+      { path: 'add-employee/:id', component: AddEmployeeComponent },
+      { path: 'detail-employee', component: DetailEmployeeComponent },
+      { path: '', redirectTo: 'view-employee', pathMatch: 'full' },
     ],
   },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
   {
     path: 'test',
     component: TestComponent,
     children: [
       { path: 'view-test', component: ViewTestComponent },
       { path: 'view-test/:abc', component: IdTestComponent },
-
       { path: 'add-test', component: AddTestComponent },
       { path: 'add-test/:id', component: AddTestComponent },
       { path: 'id-test', component: IdTestComponent },
-      { path: 'id-test/:ab', component: IdTestComponent },
       { path: '', redirectTo: 'view-test', pathMatch: 'full' },
     ],
   },
@@ -67,6 +66,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'view-test2', pathMatch: 'full' },
     ],
   },
+
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({
