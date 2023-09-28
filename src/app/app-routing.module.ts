@@ -15,6 +15,7 @@ import { Test2Component } from './test2/test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
+import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
       { path: 'view-employee', component: ViewEmployeeComponent },
       { path: 'add-employee/:id', component: AddEmployeeComponent },
       { path: 'add-employee', component: AddEmployeeComponent },
+      { path: 'detail-employee/:id', component: DetailEmployeeComponent },
       { path: '', component: ViewEmployeeComponent },
     ],
   },
