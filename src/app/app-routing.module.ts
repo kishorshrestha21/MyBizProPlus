@@ -34,7 +34,10 @@ const routes: Routes = [
     component: EmployeeComponent,
     children: [
       { path: 'view-employee', component: ViewEmployeeComponent },
+      // work same but path name diffrent
+      { path: 'view-employee/:abc', component: DetailEmployeeComponent },
       { path: 'detail-employee/:abc', component: DetailEmployeeComponent },
+      // ======================================
       { path: 'add-employee', component: AddEmployeeComponent },
       { path: 'add-employee/:id', component: AddEmployeeComponent },
       { path: 'detail-employee', component: DetailEmployeeComponent },

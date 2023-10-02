@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { employee } from '../_interface/dataType';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -55,8 +57,14 @@ export class EmployeeService {
 
   // ================================
 
-  addEmployee(data: any): Observable<any> {
-    return this._http.post(this.withImgurl, data);
+  // addEmployee(data: any): Observable<any> {
+  //   return this._http.post(this.withImgurl, data);
+  // }
+
+  addEmployee(data: any): Observable<employee> {
+    return this._http
+      .post(this.withImgurl, data)
+      .pipe(map((response) => response as employee));
   }
 
   getEmployee(): Observable<any> {

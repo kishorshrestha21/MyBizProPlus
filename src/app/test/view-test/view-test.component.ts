@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MemberService } from 'src/app/Services/member.service';
+import { test } from 'src/app/_interface/dataType';
 
 @Component({
   selector: 'app-view-test',
@@ -14,11 +15,11 @@ export class ViewTestComponent implements OnInit, OnDestroy {
     private _activeRoute: ActivatedRoute
   ) {}
 
-  newMembers: any[] = [];
+  newMembers: test[] = [];
   memberSub: any;
   getTestData() {
     this.memberSub = this._memberService.getMember().subscribe({
-      next: (res: any) => {
+      next: (res: test[]) => {
         this.newMembers = res;
       },
     });

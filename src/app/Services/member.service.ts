@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { test } from 'src/app/_interface/dataType';
 
 @Injectable({
   providedIn: 'root',
@@ -15,21 +16,21 @@ export class MemberService {
 
   memberApi = 'https://www.bizproplus.com/api/member';
 
-  addMember(data: FormData): Observable<any> {
+  addMember(data: FormData): Observable<test[]> {
     // return this._http.post(this.employeeUrl, data);
     // return this._http.post(this.memberUrl, data);
     // return this._http.post(this.newMemberUrl, data);
 
-    return this._http.post(this.memberApi, data);
+    return this._http.post<test[]>(this.memberApi, data);
   }
 
-  getMember() {
+  getMember(): Observable<test[]> {
     // return this._http.get(this.employeeUrl);
 
     // return this._http.get(this.memberUrl);
     // return this._http.get(this.newMemberUrl);
 
-    return this._http.get(this.memberApi);
+    return this._http.get<test[]>(this.memberApi);
   }
 
   getMemberById(id: number): Observable<any> {
