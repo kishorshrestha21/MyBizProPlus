@@ -29,7 +29,6 @@ import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
-import { CustomerComponent } from './Components/Customer/customer/customer.component';
 import { CustomerModuleModule } from './allModules/customer-module/customer-module.module';
 
 @NgModule({
