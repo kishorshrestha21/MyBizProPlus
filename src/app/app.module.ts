@@ -29,8 +29,8 @@ import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
-import { AddCustomerComponent } from './Components/Customer/add-customer/add-customer.component';
-import { ViewCustomerComponent } from './Components/Customer/view-customer/view-customer.component';
+import { CustomerComponent } from './Components/Customer/customer/customer.component';
+import { CustomerModuleModule } from './allModules/customer-module/customer-module.module';
 
 @NgModule({
   declarations: [
@@ -56,8 +56,6 @@ import { ViewCustomerComponent } from './Components/Customer/view-customer/view-
     ViewTest2Component,
     IdTest2Component,
     DetailEmployeeComponent,
-    AddCustomerComponent,
-    ViewCustomerComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +66,7 @@ import { ViewCustomerComponent } from './Components/Customer/view-customer/view-
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    CustomerModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
