@@ -16,6 +16,12 @@ export class SidenavComponent {
     },
 
     {
+      icon: 'people',
+      name: 'Customer',
+      link: '/customer',
+    },
+
+    {
       icon: 'person_2',
       name: 'Designation',
       link: '/designation',
