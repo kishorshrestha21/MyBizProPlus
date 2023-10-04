@@ -7,7 +7,7 @@ import { CustomerComponent } from 'src/app/Components/Customer/customer/customer
 
 const customerRoute: Routes = [
   {
-    path: '',
+    path: 'customer',
     component: CustomerComponent,
     children: [
       { path: 'add-customer', component: AddCustomerComponent },
