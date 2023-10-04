@@ -1,1 +1,88 @@
-<p>add-customer works!</p>
+<div class="customerForm">
+  {{ customerId }}
+  <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+    <div class="formGroup" formGroupName="customerDetail">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput formControlName="cName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput formControlName="cLName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone No</mat-label>
+        <input type="text" matInput formControlName="cPhone" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput formControlName="cEmail" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="cDob" />
+        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-radio-group aria-label="Select an oprion" formControlName="cGender">
+        <label for="gender">Gender</label>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <!-- Address -->
+    <div class="formGroup" formGroupName="customerAddress">
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Address"
+          formControlName="cAddress"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Appartment No</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Appartment No"
+          formControlName="cApartment"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="City"
+          formControlName="cCity"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Zipcode</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Zipcode"
+          formControlName="cZipcode"
+        />
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary">Save</button>
+    <button type="button" (click)="plus()">+</button>
+  </form>
+</div>
