@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myBizProPlus';
+  constructor() {
+    console.log('App Component');
+  }
 }

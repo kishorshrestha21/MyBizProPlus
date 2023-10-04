@@ -24,6 +24,7 @@ export class ViewEmployeeComponent implements OnInit, OnDestroy {
     private _activeRoute: ActivatedRoute,
     private _fb: FormBuilder
   ) {
+    console.log('view Employee');
     // this.employeeForm = this._fb.group({
     //   employeeDetail: this._fb.group({
     //     firstname: ['', Validators.required],
@@ -97,7 +98,7 @@ export class ViewEmployeeComponent implements OnInit, OnDestroy {
     this._employeeService.getEmployee().subscribe({
       next: (res: any) => {
         this.employees = res;
-        console.log(this.employees);
+        // console.log(this.employees);
         // Create a new MatTableDataSource with the fetched data
         this.dataSource = new MatTableDataSource(res);
 

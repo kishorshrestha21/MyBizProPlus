@@ -29,7 +29,6 @@ import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
-import { CustomerModuleModule } from './allModules/customer-module/customer-module.module';
 
 @NgModule({
   declarations: [
@@ -65,7 +64,6 @@ import { CustomerModuleModule } from './allModules/customer-module/customer-modu
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    CustomerModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
