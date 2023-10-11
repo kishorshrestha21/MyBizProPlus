@@ -1,6 +1,15 @@
+<div class="search">
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input type="search" matInput [(ngModel)]="searchText" />
+  </mat-form-field>
+</div>
 <div class="contentWrap">
   <div class="empCard">
-    <div class="empBody" *ngFor="let employee of employees">
+    <div
+      class="empBody"
+      *ngFor="let employee of employees | employeeFilter : searchText"
+    >
       <p>{{ employee.id }}</p>
       <div class="empBox">
         <img

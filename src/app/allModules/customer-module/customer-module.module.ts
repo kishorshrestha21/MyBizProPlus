@@ -32,4 +32,8 @@ const customerRoute: Routes = [
     ReactiveFormsModule,
   ],
 })
-export class CustomerModuleModule {}
+export class CustomerModuleModule {
+  constructor() {
+    console.log('Customer Module');
+  }
+}

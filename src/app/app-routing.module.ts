@@ -1,24 +1,17 @@
-import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Component, NgModule, NgModuleFactory, Type } from '@angular/core';
+import { DefaultExport, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './Components/FrontPage/dashboard/dashboard.component';
-import { AddEmployeeComponent } from './Components/Employee/add-employee/add-employee.component';
-import { ViewEmployeeComponent } from './Components/Employee/view-employee/view-employee.component';
-import { EmployeeComponent } from './Components/Employee/employee/employee.component';
-import { TestComponent } from './test/test.component';
-import { ViewTestComponent } from './test/view-test/view-test.component';
-import { AddTestComponent } from './test/add-test/add-test.component';
 import { DesignationComponent } from './Components/designation/designation.component';
 import { AddDesignationComponent } from './Components/designation/add-designation/add-designation.component';
 import { ViewDesignationComponent } from './Components/designation/view-designation/view-designation.component';
-import { IdTestComponent } from './test/id-test/id-test.component';
 import { Test2Component } from './test2/test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
-import { DetailEmployeeComponent } from './Components/Employee/detail-employee/detail-employee.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+
   {
     path: 'customer',
     loadChildren: () =>
@@ -26,6 +19,21 @@ const routes: Routes = [
         (m) => m.CustomerModuleModule
       ),
   },
+
+  {
+    path: 'test',
+    loadChildren: () =>
+      import('./allModules/test/test.module').then((m) => m.TestModule),
+  },
+
+  {
+    path: 'employee',
+    loadChildren: () =>
+      import('./allModules/employee/employee.module').then(
+        (m) => m.EmployeeModule
+      ),
+  },
+
   {
     path: 'designation',
     component: DesignationComponent,
@@ -35,34 +43,7 @@ const routes: Routes = [
       { path: '', component: ViewDesignationComponent },
     ],
   },
-  {
-    path: 'employee',
-    component: EmployeeComponent,
-    children: [
-      { path: 'view-employee', component: ViewEmployeeComponent },
-      // work same but path name diffrent
-      { path: 'view-employee/:abc', component: DetailEmployeeComponent },
-      { path: 'detail-employee/:abc', component: DetailEmployeeComponent },
-      // ======================================
-      { path: 'add-employee', component: AddEmployeeComponent },
-      { path: 'add-employee/:id', component: AddEmployeeComponent },
-      { path: 'detail-employee', component: DetailEmployeeComponent },
-      { path: '', redirectTo: 'view-employee', pathMatch: 'full' },
-    ],
-  },
 
-  {
-    path: 'test',
-    component: TestComponent,
-    children: [
-      { path: 'view-test', component: ViewTestComponent },
-      { path: 'view-test/:abc', component: IdTestComponent },
-      { path: 'add-test', component: AddTestComponent },
-      { path: 'add-test/:id', component: AddTestComponent },
-      { path: 'id-test', component: IdTestComponent },
-      { path: '', redirectTo: 'view-test', pathMatch: 'full' },
-    ],
-  },
   {
     path: 'test2',
     component: Test2Component,
@@ -76,7 +57,7 @@ const routes: Routes = [
     ],
   },
 
-  { path: '', redirectTo: '/test', pathMatch: 'full' },
+  { path: '', redirectTo: '/employee/view-employee', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -84,3 +65,20 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+function m(
+  value: typeof import('/Users/kishor/Documents/newAngular/myBizProPlus/src/app/allModules/employee/employee.module')
+):
+  | Routes
+  | Type<any>
+  | NgModuleFactory<any>
+  | DefaultExport<Type<any>>
+  | DefaultExport<Routes>
+  | PromiseLike<
+      | Routes
+      | Type<any>
+      | NgModuleFactory<any>
+      | DefaultExport<Type<any>>
+      | DefaultExport<Routes>
+    > {
+  throw new Error('Function not implemented.');
+}

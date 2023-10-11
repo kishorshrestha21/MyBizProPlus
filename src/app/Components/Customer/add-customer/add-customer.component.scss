@@ -1,0 +1,44 @@
+.mat-form-field {
+  margin: 0;
+  padding: 0;
+}
+
+.mat-form-field {
+  height: 50px; /* or whatever height fits best */
+}
+
+.formGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+.invalid {
+  color: red;
+}
+
+.AddressFormGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.submitBtn {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  column-gap: 10px;
+  button {
+    flex: 1;
+    height: 55px;
+    font-size: 1rem;
+  }
+}
+
+.saveBtn {
+  background-color: green;
+  color: white;
+}

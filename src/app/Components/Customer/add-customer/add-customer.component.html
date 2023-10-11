@@ -1,6 +1,7 @@
 <div class="customerForm">
-  {{ customerId }}
+  <span>{{ "C" + customerId }}</span>
   <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+    <input type="text" hidden value=" {{ customerId }}" />
     <div class="formGroup" formGroupName="customerDetail">
       <mat-form-field appearance="outline">
         <mat-label>First Name</mat-label>
@@ -72,6 +73,16 @@
       </mat-form-field>
 
       <mat-form-field appearance="outline">
+        <mat-label>State</mat-label>
+        <mat-select formControlName="cState" placeholder=" Select State">
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{
+            state
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
         <mat-label>Zipcode</mat-label>
         <input
           type="text"
@@ -82,7 +93,10 @@
       </mat-form-field>
     </div>
 
-    <button mat-raised-button color="primary">Save</button>
+    <div class="submitBtn">
+      <button type="button" mat-raised-button color="warn">Cancle</button>
+      <button mat-raised-button class="saveBtn">Save</button>
+    </div>
     <button type="button" (click)="plus()">+</button>
   </form>
 </div>

@@ -6,8 +6,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { filter } from 'rxjs';
-import { employee } from 'src/app/_interface/dataType';
 
 @Component({
   selector: 'app-view-employee',
@@ -17,6 +15,7 @@ import { employee } from 'src/app/_interface/dataType';
 export class ViewEmployeeComponent implements OnInit, OnDestroy {
   employee: any;
   last: any;
+  searchText: any;
   constructor(
     private _headerService: HeaderService,
     private _employeeService: EmployeeService,

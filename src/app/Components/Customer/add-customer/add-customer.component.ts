@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HeaderService } from 'src/app/Services/header.service';
+import { StateService } from 'src/app/Services/state.service';
 
 @Component({
   selector: 'app-add-customer',
@@ -11,8 +12,14 @@ export class AddCustomerComponent implements OnInit, OnDestroy {
   customerId: number = 1000;
   customers: any[] = [];
   customerForm!: FormGroup;
-  constructor(private _headerService: HeaderService, private _fb: FormBuilder) {
+  states: string[] = [];
+  constructor(
+    private _headerService: HeaderService,
+    private _fb: FormBuilder,
+    private _states: StateService
+  ) {
     this.customerFormGroup();
+    this.states = this._states.states;
   }
 
   customerFormGroup() {
@@ -30,6 +37,7 @@ export class AddCustomerComponent implements OnInit, OnDestroy {
         cAddress: ['', Validators.required],
         cApartment: [''],
         cCity: ['', Validators.required],
+        cState: ['', Validators.required],
         cZipcode: ['', Validators.required],
       }),
     });

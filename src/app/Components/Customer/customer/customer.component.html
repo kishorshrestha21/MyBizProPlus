@@ -2,7 +2,13 @@
   <button mat-raised-button color="accent" routerLink="{{ btnLink }}">
     {{ btnLinkText }}
   </button>
+  <button mat-raised-button color="accent">Send Email</button>
+  <button mat-raised-button color="accent">Setting</button>
+  <button mat-raised-button color="accent" (click)="openReward()">
+    Reward
+  </button>
 </div>
+
 <div class="routes">
   <router-outlet></router-outlet>
 </div>

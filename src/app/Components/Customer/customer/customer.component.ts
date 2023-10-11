@@ -1,5 +1,7 @@
 import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { HeaderService } from 'src/app/Services/header.service';
+import { RewardPointComponent } from '../reward-point/reward-point.component';
 
 @Component({
   selector: 'app-customer',
@@ -11,9 +13,14 @@ export class CustomerComponent implements AfterViewInit {
   btnLinkText: string = '';
   constructor(
     private _hederService: HeaderService,
-    private _cdRef: ChangeDetectorRef
+    private _cdRef: ChangeDetectorRef,
+    private _dialogBox: MatDialog
   ) {
-    console.log('Customer Component');
+    console.log('customer Component');
+  }
+
+  openReward() {
+    this._dialogBox.open(RewardPointComponent);
   }
   ngAfterViewInit(): void {
     this._hederService.linkBtnText.subscribe((res) => {

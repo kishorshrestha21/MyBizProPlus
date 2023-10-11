@@ -7,7 +7,9 @@ import { HeaderService } from 'src/app/Services/header.service';
   styleUrls: ['./view-customer.component.scss'],
 })
 export class ViewCustomerComponent implements OnInit, OnDestroy {
-  constructor(private _headerService: HeaderService) {}
+  constructor(private _headerService: HeaderService) {
+    console.log('View Customer Component');
+  }
 
   ngOnInit() {
     this._headerService.headerTitle.next('Customer List');

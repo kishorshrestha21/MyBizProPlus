@@ -9,5 +9,7 @@ import { HeaderService } from 'src/app/Services/header.service';
 export class DesignationComponent {
   btnLink: string = '';
   btnLinkText: string = '';
-  constructor() {}
+  constructor() {
+    console.log('Designation Component');
+  }
 }
