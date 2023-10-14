@@ -5,7 +5,7 @@ import { AddCustomerComponent } from 'src/app/Components/Customer/add-customer/a
 import { ViewCustomerComponent } from 'src/app/Components/Customer/view-customer/view-customer.component';
 import { CustomerComponent } from 'src/app/Components/Customer/customer/customer.component';
 import { MaterialModule } from '../material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const customerRoute: Routes = [
   {
@@ -30,6 +30,7 @@ const customerRoute: Routes = [
     MaterialModule,
     RouterModule.forChild(customerRoute),
     ReactiveFormsModule,
+    FormsModule,
   ],
 })
 export class CustomerModuleModule {

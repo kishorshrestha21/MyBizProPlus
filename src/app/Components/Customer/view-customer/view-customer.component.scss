@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  margin: auto;
+  // box-shadow: 1px 10px 10px 1px rgba(39, 38, 38, 0.567);
+  border-collapse: collapse;
+  border: 5px;
+  overflow: scroll;
+}
+td,
+th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+th {
+  //   background-color: rgb(104, 96, 96);
+  //   color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  font-weight: 100;
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.wrap {
+  width: 100%;
+}
