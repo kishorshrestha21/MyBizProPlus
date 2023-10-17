@@ -1,17 +1,19 @@
 <div class="customerForm">
-  <h2>{{ cCids }}</h2>
-  <br /><br />
-
-  <!-- <span>{{ customerId }}</span> -->
-  <form #customerIdForm="ngForm" (ngSubmit)="saveId(customerIdForm.value)">
-    <!-- <input type="text" name="cId" [(ngModel)]="customerId" /> -->
-    <!-- <button>Save ID</button> -->
-  </form>
-  <input type="text" name="cId" value="{{ cCids }}" />
-  <button type="button" (click)="plus()">+</button>
-  <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+  <h4>{{ "Customer ID: C" + cCids }}</h4>
+  <form
+    [formGroup]="customerForm"
+    (ngSubmit)="saveCustomer()"
+    #resetCustomer="ngForm"
+  >
     <div class="formGroup" formGroupName="customerDetail">
-      <input type="text" formControlName="cId" />
+      <input
+        type="text"
+        value="{{ 'C' + cCids }}"
+        matInput
+        formControlName="cId"
+        [hidden]="true"
+      />
+
       <mat-form-field appearance="outline">
         <mat-label>First Name</mat-label>
         <input type="text" matInput formControlName="cName" />
@@ -104,7 +106,7 @@
 
     <div class="submitBtn">
       <button type="button" mat-raised-button color="warn">Cancle</button>
-      <button mat-raised-button class="saveBtn">Save</button>
+      <button mat-raised-button class="saveBtn">{{ submitText }}</button>
     </div>
   </form>
 </div>

@@ -1,5 +1,12 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from 'src/app/Services/customer.service';
 import { HeaderService } from 'src/app/Services/header.service';
 import { StateService } from 'src/app/Services/state.service';
@@ -15,62 +22,44 @@ export class AddCustomerComponent implements OnInit, OnDestroy {
   customerForm!: FormGroup;
   states: string[] = [];
   cCids: any;
+  submitText = 'Save';
+  @ViewChild('resetCustomer') resetCustomerForm: any;
   constructor(
     private _headerService: HeaderService,
     private _fb: FormBuilder,
     private _states: StateService,
     private _customerService: CustomerService,
-    private cdRef: ChangeDetectorRef
+    private cdRef: ChangeDetectorRef,
+    private _activeRoute: ActivatedRoute,
+    private _router: Router
   ) {
     this.customerFormGroup();
     this.states = this._states.states;
   }
-  // saveId(data: any) {
-  //   this.customerId = this.customerId + 1;
-  //   this._customerService.addCustomerId(data).subscribe({
-  //     next: (res) => {},
-  //   });
-  // }
-
+  // Get customer ID =====
   getCid() {
     this._customerService.getCustomerSingalData().subscribe({
       next: (res: any) => {
         this.cCids = res[0].cId;
+
+        const cIdControl = this.customerForm.get('customerDetail.cId');
+        if (cIdControl) {
+          cIdControl.setValue('C' + this.cCids);
+        } else {
+          console.error('customerDetail.cId control does not exist!');
+        }
+
         this.cdRef.detectChanges();
+      },
+      error: (err) => {
+        console.error('Failed to fetch the cId:', err);
       },
     });
   }
-
-  saveId(data: any) {
-    // this._customerService.getCustomerId(1).subscribe(
-    //   (existingData) => {
-    //     existingData.cId = this.customerId;
-    //     this.customerId++;
-    //     this._customerService
-    //       .updateCustomerId(existingData, existingData.id)
-    //       .subscribe({
-    //         next: (res) => {
-    //           this.getCid();
-    //           console.log(
-    //             'Data updated successfully with cId:',
-    //             existingData.cId
-    //           );
-    //         },
-    //         error: (err) => {
-    //           console.error('Failed to update data:', err);
-    //         },
-    //       });
-    //   },
-    //   (error) => {
-    //     console.error('Failed to fetch existing data:', error);
-    //   }
-    // );
-  }
-
   customerFormGroup() {
     this.customerForm = this._fb.group({
       customerDetail: this._fb.group({
-        cId: [],
+        cId: ['', Validators.required],
         cName: ['', Validators.required],
         cLName: ['', Validators.required],
         cPhone: ['', Validators.required],
@@ -102,12 +91,44 @@ export class AddCustomerComponent implements OnInit, OnDestroy {
       });
   }
 
-  saveCustomer() {
-    this._customerService.addCustomer(this.customerForm.value).subscribe({
+  getCustomerDataInEditForm() {
+    const id = this._activeRoute.snapshot.params['id'];
+    if (id) {
+      this.submitText = 'Update';
+    }
+
+    this._customerService.getCustomerById(id).subscribe({
       next: (res) => {
-        alert('Customer Added.');
+        this.customerForm.patchValue(res);
       },
     });
+  }
+
+  saveCustomer() {
+    const id = this._activeRoute.snapshot.params['id'];
+    if (id) {
+      this._customerService
+        .editCustomer(id, this.customerForm.value)
+        .subscribe({
+          next: (res) => {
+            alert('Updated');
+            this._router.navigate(['/customer/view-customer']);
+          },
+        });
+    } else if (this.customerForm.valid) {
+      this._customerService.addCustomer(this.customerForm.value).subscribe({
+        next: (res) => {
+          alert('Customer Added.');
+          this.resetCustomerForm.resetForm();
+          this.plus();
+        },
+        error: (err) => {
+          console.error('Failed to save the customer:', err);
+        },
+      });
+    } else {
+      alert('Formnot valied');
+    }
   }
 
   ngOnInit() {
@@ -115,6 +136,7 @@ export class AddCustomerComponent implements OnInit, OnDestroy {
     this._headerService.linkBtnText.next('View Customer');
     this._headerService.linkBtn.next('view-customer');
     this.getCid();
+    this.getCustomerDataInEditForm();
   }
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');

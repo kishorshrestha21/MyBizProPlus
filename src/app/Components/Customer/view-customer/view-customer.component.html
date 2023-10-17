@@ -1,34 +1,40 @@
 <div class="wrap">
   <div class="customerList">
-    <table>
+    <table class="cTable">
       <thead>
         <th>S.No</th>
+        <th>Customer ID</th>
         <th>Name</th>
         <th>Last Name</th>
         <th>Phone No</th>
         <th>Email</th>
-        <th>Dob</th>
         <th>Gender</th>
-        <th>Address</th>
-        <th>Appartmanet</th>
-        <th>City</th>
-        <th>Satate</th>
-        <th>Zip cope</th>
+        <th>Action</th>
       </thead>
       <tbody>
         <tr *ngFor="let customer of customers; index as i">
           <td>{{ i + 1 }}</td>
+          <td>{{ customer.customerDetail.cId }}</td>
           <td>{{ customer.customerDetail.cName }}</td>
           <td>{{ customer.customerDetail.cLName }}</td>
           <td>{{ customer.customerDetail.cPhone }}</td>
           <td>{{ customer.customerDetail.cEmail }}</td>
-          <td>{{ customer.customerDetail.cDob | date : "shortDate" }}</td>
+          <!-- <td>{{ customer.customerDetail.cDob | date : "shortDate" }}</td> -->
           <td>{{ customer.customerDetail.cGender }}</td>
-          <td>{{ customer.customerAddress.cAddress }}</td>
-          <td>{{ customer.customerAddress.cApartment }}</td>
-          <td>{{ customer.customerAddress.cCity }}</td>
-          <td>{{ customer.customerAddress.cState }}</td>
-          <td>{{ customer.customerAddress.cZipcode }}</td>
+          <td>
+            <button
+              mat-icon-button
+              (click)="navigateToAddCustomer(customer.id)"
+            >
+              <mat-icon color="primary">edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteCustomerById(customer.id)">
+              <mat-icon color="warn">delete</mat-icon>
+            </button>
+            <button mat-icon-button routerLink="{{ customer.id }}">
+              <span>detail</span>
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

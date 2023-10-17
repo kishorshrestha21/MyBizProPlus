@@ -21,19 +21,57 @@
   "customerId": [
     {
       "id": 1,
-      "cId": 1025
+      "cId": 1007
     }
   ],
   "customers": [
     {
       "customerDetail": {
-        "cId": "C1000",
+        "cId": "C1002",
+        "cName": "kishor",
+        "cLName": "Thapa",
+        "cPhone": "6314807913",
+        "cEmail": "iamkishorshrestha@gmail.com",
+        "cDob": "2023-10-02T04:00:00.000Z",
+        "cGender": "male"
+      },
+      "customerAddress": {
+        "cAddress": "9730 57th Avenue",
+        "cApartment": "",
+        "cCity": "new york",
+        "cState": "Alabama",
+        "cZipcode": "11368"
+      },
+      "id": 3
+    },
+    {
+      "customerDetail": {
+        "cId": "C1004",
+        "cName": "Tested",
+        "cLName": "Test",
+        "cPhone": "4141715171",
+        "cEmail": "haah@gamail.com",
+        "cDob": "",
+        "cGender": "female"
+      },
+      "customerAddress": {
+        "cAddress": "4720 parkmount dr",
+        "cApartment": "",
+        "cCity": "fort worth",
+        "cState": "Arkansas",
+        "cZipcode": "76317"
+      },
+      "id": 4
+    },
+    {
+      "customerDetail": {
+        "cId": "C1005",
         "cName": "kishor",
         "cLName": "shrestha",
         "cPhone": "6314807913",
         "cEmail": "iamkishorshrestha@gmail.com",
         "cDob": "",
-        "cGender": ""
+        "cGender": "male"
       },
       "customerAddress": {
         "cAddress": "9730 57th Avenue",
@@ -42,140 +80,7 @@
         "cState": "Arkansas",
         "cZipcode": "11368"
       },
-      "id": 1
-    },
-    {
-      "customerDetail": {
-        "cId": "C1000",
-        "cName": "Harry",
-        "cLName": "Thom",
-        "cPhone": "1232345432",
-        "cEmail": "harry@gmailc.om",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "22",
-        "cApartment": "",
-        "cCity": "lalitpur",
-        "cState": "Arkansas",
-        "cZipcode": "11368"
-      },
-      "id": 2
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "",
-        "cLName": "",
-        "cPhone": "",
-        "cEmail": "",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "",
-        "cApartment": "",
-        "cCity": "",
-        "cState": "",
-        "cZipcode": ""
-      },
-      "id": 3
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "",
-        "cLName": "",
-        "cPhone": "",
-        "cEmail": "",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "",
-        "cApartment": "",
-        "cCity": "",
-        "cState": "",
-        "cZipcode": ""
-      },
-      "id": 4
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "",
-        "cLName": "",
-        "cPhone": "",
-        "cEmail": "",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "",
-        "cApartment": "",
-        "cCity": "",
-        "cState": "",
-        "cZipcode": ""
-      },
       "id": 5
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "Harry",
-        "cLName": "Thom",
-        "cPhone": "1232345432",
-        "cEmail": "harry@gmailc.om",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "22",
-        "cApartment": "",
-        "cCity": "lalitpur",
-        "cState": "California",
-        "cZipcode": "11368"
-      },
-      "id": 6
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "",
-        "cLName": "",
-        "cPhone": "",
-        "cEmail": "",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "",
-        "cApartment": "",
-        "cCity": "",
-        "cState": "",
-        "cZipcode": ""
-      },
-      "id": 7
-    },
-    {
-      "customerDetail": {
-        "cId": null,
-        "cName": "",
-        "cLName": "",
-        "cPhone": "",
-        "cEmail": "",
-        "cDob": "",
-        "cGender": ""
-      },
-      "customerAddress": {
-        "cAddress": "",
-        "cApartment": "",
-        "cCity": "",
-        "cState": "",
-        "cZipcode": ""
-      },
-      "id": 8
     }
   ],
   "member": [

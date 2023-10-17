@@ -22,6 +22,7 @@ const testRoutes: Routes = [
     ],
   },
 ];
+
 @NgModule({
   declarations: [
     TestComponent,

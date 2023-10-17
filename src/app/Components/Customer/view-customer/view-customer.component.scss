@@ -6,6 +6,7 @@ table {
   border: 5px;
   overflow: scroll;
 }
+
 td,
 th {
   white-space: nowrap;
@@ -13,24 +14,24 @@ th {
   text-overflow: ellipsis;
 }
 th {
-  //   background-color: rgb(104, 96, 96);
-  //   color: white;
+  background-color: rgb(104, 96, 96);
+  color: white;
   padding: 16px;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
 }
 
 td {
-  padding: 8px;
+  padding: 0px 16px;
   text-align: left;
   font-weight: 100;
-  width: 100%;
+  width: auto;
 }
 
 tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
-.wrap {
-  width: 100%;
+button span {
+  font-size: 16px;
 }

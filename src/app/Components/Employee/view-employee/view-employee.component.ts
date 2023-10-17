@@ -131,8 +131,6 @@ export class ViewEmployeeComponent implements OnInit, OnDestroy {
     });
   }
 
-  editEmployeeById() {}
-
   // Apply filter to the data source
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

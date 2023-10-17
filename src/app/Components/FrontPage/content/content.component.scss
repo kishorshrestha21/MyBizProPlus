@@ -1,8 +1,9 @@
-.contentWrap {
-  position: relative;
-  width: 100%;
-  overflow-x: scroll;
-}
+// .contentWrap {
+//   position: relative;
+//   width: 100%;
+//   overflow-x: scroll;
+// }
+
 .contenthead {
   position: fixed;
   top: 4rem;
@@ -16,8 +17,8 @@
   overflow-x: scroll;
 }
 .roterOutlet {
-  margin-top: 4rem;
-  padding: 2rem;
+  margin-top: 6rem;
+  padding: 4rem 3rem;
   box-sizing: border-box;
   width: 100%;
   // overflow: hidden;

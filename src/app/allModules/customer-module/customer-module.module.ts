@@ -6,6 +6,7 @@ import { ViewCustomerComponent } from 'src/app/Components/Customer/view-customer
 import { CustomerComponent } from 'src/app/Components/Customer/customer/customer.component';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailCustomerComponent } from 'src/app/Components/Customer/detail-customer/detail-customer.component';
 
 const customerRoute: Routes = [
   {
@@ -14,6 +15,8 @@ const customerRoute: Routes = [
     children: [
       { path: 'add-customer', component: AddCustomerComponent },
       { path: 'view-customer', component: ViewCustomerComponent },
+      { path: 'add-customer/:id', component: AddCustomerComponent },
+      { path: 'view-customer/:id', component: DetailCustomerComponent },
       { path: '', redirectTo: 'view-customer', pathMatch: 'full' },
     ],
   },
@@ -24,6 +27,7 @@ const customerRoute: Routes = [
     AddCustomerComponent,
     CustomerComponent,
     ViewCustomerComponent,
+    DetailCustomerComponent,
   ],
   imports: [
     CommonModule,
