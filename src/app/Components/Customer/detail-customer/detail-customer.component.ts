@@ -14,13 +14,13 @@ export class DetailCustomerComponent implements OnInit {
     private _activeRoute: ActivatedRoute
   ) {}
 
-  public customerDetail: any;
+  public customer: any;
 
   getCustomerDataInEditForm() {
     const id = this._activeRoute.snapshot.params['id'];
     this._customerService.getCustomerById(id).subscribe({
       next: (res) => {
-        this.customerDetail = res;
+        this.customer = res;
       },
       error: (err: any) => {
         console.error(err);

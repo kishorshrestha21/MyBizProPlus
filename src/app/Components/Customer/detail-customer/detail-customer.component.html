@@ -1,4 +1,16 @@
-<h1>Customer Detail</h1>
-
-<p><strong>ID:</strong> {{ customerDetail?.customerDetail.cId }}</p>
-<p><strong>Name:</strong> {{ customerDetail?.customerDetail.cName }}</p>
+<h3>
+  <strong>Name: </strong>
+  {{ customer.customerDetail.cName + " " + customer.customerDetail.cLName }}
+</h3>
+<p><strong>ID: </strong> {{ customer.customerDetail.cId }}</p>
+<p><strong>Emial: </strong>{{ customer.customerDetail.cEmail }}</p>
+<p><strong>Phone: </strong>{{ customer.customerDetail.cPhone }}</p>
+<p>
+  <strong>Dob: </strong>{{ customer.customerDetail.cDob | date : "longDate" }}
+</p>
+<p><strong>Gender: </strong>{{ customer.customerDetail.cGender }}</p>
+<p><Strong>Address: </Strong>{{ customer.customerAddress.cAddress }}</p>
+<p><Strong>Appartment: </Strong>{{ customer.customerAddress.cAppartment }}</p>
+<p><Strong> City: </Strong>{{ customer.customerAddress.cCity }}</p>
+<p><Strong>State: </Strong>{{ customer.customerAddress.cState }}</p>
+<p><Strong>Zip-code: </Strong>{{ customer.customerAddress.cZipcode }}</p>

@@ -65,20 +65,20 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-function m(
-  value: typeof import('/Users/kishor/Documents/newAngular/myBizProPlus/src/app/allModules/employee/employee.module')
-):
-  | Routes
-  | Type<any>
-  | NgModuleFactory<any>
-  | DefaultExport<Type<any>>
-  | DefaultExport<Routes>
-  | PromiseLike<
-      | Routes
-      | Type<any>
-      | NgModuleFactory<any>
-      | DefaultExport<Type<any>>
-      | DefaultExport<Routes>
-    > {
-  throw new Error('Function not implemented.');
-}
+// function m(
+//   value: typeof import('/Users/kishor/Documents/newAngular/myBizProPlus/src/app/allModules/employee/employee.module')
+// ):
+//   | Routes
+//   | Type<any>
+//   | NgModuleFactory<any>
+//   | DefaultExport<Type<any>>
+//   | DefaultExport<Routes>
+//   | PromiseLike<
+//       | Routes
+//       | Type<any>
+//       | NgModuleFactory<any>
+//       | DefaultExport<Type<any>>
+//       | DefaultExport<Routes>
+//     > {
+//   throw new Error('Function not implemented.');
+// }

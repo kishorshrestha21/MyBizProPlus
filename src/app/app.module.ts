@@ -26,6 +26,10 @@ import { RewardPointComponent } from './Components/Customer/reward-point/reward-
 import { EmployeeModule } from './allModules/employee/employee.module';
 import { TestModule } from './allModules/test/test.module';
 import { EmployeeFilterPipe } from './pipes/employee-filter.pipe';
+import { PurchaseComponent } from './Components/Purchase/purchase/purchase.component';
+import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
+import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
+import { PurchaseReportComponent } from './Components/Purchase/purchase-report/purchase-report.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { EmployeeFilterPipe } from './pipes/employee-filter.pipe';
     ViewTest2Component,
     IdTest2Component,
     RewardPointComponent,
+    PurchaseComponent,
+    AddPurchaseComponent,
+    ViewPurchaseComponent,
+    PurchaseReportComponent,
   ],
   imports: [
     BrowserModule,
