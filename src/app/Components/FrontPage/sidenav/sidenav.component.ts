@@ -22,7 +22,7 @@ export class SidenavComponent {
     },
 
     {
-      icon: 'person_2',
+      icon: 'category',
       name: 'Designation',
       link: '/designation',
     },
@@ -32,7 +32,11 @@ export class SidenavComponent {
       name: 'Employee',
       link: '/employee',
     },
-
+    {
+      icon: 'shopping_cart',
+      name: 'Purchase',
+      link: '/purchase',
+    },
     {
       icon: 'people',
       name: 'Test',

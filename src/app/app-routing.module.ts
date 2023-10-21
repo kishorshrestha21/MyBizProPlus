@@ -8,6 +8,9 @@ import { Test2Component } from './test2/test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
+import { PurchaseComponent } from './Components/Purchase/purchase/purchase.component';
+import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
+import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -41,6 +44,16 @@ const routes: Routes = [
       { path: 'add-designation', component: AddDesignationComponent },
       { path: 'view-designation', component: ViewDesignationComponent },
       { path: '', component: ViewDesignationComponent },
+    ],
+  },
+
+  {
+    path: 'purchase',
+    component: PurchaseComponent,
+    children: [
+      { path: 'add-purchase', component: AddPurchaseComponent },
+      { path: 'view-purchase', component: ViewPurchaseComponent },
+      { path: '', component: ViewPurchaseComponent },
     ],
   },
 
