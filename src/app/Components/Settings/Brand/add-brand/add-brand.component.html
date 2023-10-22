@@ -1,1 +1,52 @@
-<p>add-brand works!</p>
+<div class="dailogHead">
+  <p>Brand Form</p>
+</div>
+
+<form [formGroup]="brandForm" (ngSubmit)="barndSave()">
+  <div mat-dialog-content class="brandForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Brand Name</mat-label>
+      <input type="text" matInput formControlName="brand" />
+    </mat-form-field>
+  </div>
+  <div class="fileUpload">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="brandLogo.click()"
+      [value]="fileName"
+    >
+      <mat-icon>attach_file</mat-icon>
+      <span>{{ fileName ? fileName : buttonName }}</span>
+    </button>
+    <span class="closeButton">
+      <mat-icon
+        class="closeIcon"
+        *ngIf="fileName"
+        (click)="deleteLogo(brandLogo)"
+      >
+        close
+      </mat-icon>
+    </span>
+
+    <input
+      type="file"
+      #brandLogo
+      (change)="onUploadLogo($event)"
+      formControlName="logo"
+    />
+  </div>
+  <div mat-dialog-actions class="dialogAction">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      mat-dialog-close="false"
+    >
+      Cancel
+    </button>
+    <button mat-raised-button color="primary">
+      {{ _data ? "Update" : "Save" }}
+    </button>
+  </div>
+</form>

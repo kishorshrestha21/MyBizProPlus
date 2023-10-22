@@ -9,112 +9,58 @@ import { MemberService } from 'src/app/Services/member.service';
   styleUrls: ['./add-test.component.scss'],
 })
 export class AddTestComponent implements OnInit {
-  file_arr: any;
-  newMembers: any[] = [];
-  displayedImageUrl: any;
-  isImageChanged = false; // Add this property to track if the image has been changed
-  currentImageUrl: string | null = null; // To store the existing image URL
+  file_arr: any; // Variable to store uploaded files
+  newMembers: any[] = []; // Array to store new members (not used in the provided code)
+  displayedImageUrl: any; // URL of the image to be displayed in the component
+
+  // Boolean to determine if the user has changed the image
+  isImageChanged = false;
+
+  // Stores the existing image URL for the member
+  currentImageUrl: string | null = null;
+
   constructor(
-    private _fb: FormBuilder,
-    private _memberService: MemberService,
-    private _router: Router,
-    private _activeRoute: ActivatedRoute,
-    private cdRef: ChangeDetectorRef
+    private _fb: FormBuilder, // Service to build reactive forms
+    private _memberService: MemberService, // Service to interact with members
+    private _router: Router, // Angular's Router service
+    private _activeRoute: ActivatedRoute, // Information about the active route
+    private cdRef: ChangeDetectorRef // Service to interact with change detection
   ) {}
 
-  newMemberForm!: FormGroup;
+  newMemberForm!: FormGroup; // The form structure for adding/editing members
+
+  // Method triggered when a file is selected
   newUploadFile(event: any) {
     const file: File = event.target.files ? event.target.files[0] : null;
-    // if (file) {
-    this.file_arr = file;
-    this.isImageChanged = true;
-    // }
+    this.file_arr = file; // Store the file
+    this.isImageChanged = true; // Mark that the image has changed
   }
 
-  // onSave() {
-  //   const id = this._activeRoute.snapshot.params['id'];
-
-  //   if (id) {
-  //     const formData = new FormData();
-  //     formData.append(
-  //       'fname',
-  //       this.newMemberForm.get('memberDetail.fname')?.value
-  //     );
-
-  //     formData.append(
-  //       'lname',
-  //       this.newMemberForm.get('memberDetail.lname')?.value
-  //     );
-  //     // this line of code for using post method instead of put method
-  //     formData.append('_method', 'PUT');
-
-  //     if (this.isImageChanged) {
-  //       formData.append('image', this.file_arr);
-  //     }
-
-  //     else if (this.currentImageUrl) {
-  //       formData.append('image', this.currentImageUrl);
-  //     }
-
-  //     this._memberService.editMember(id, formData).subscribe({
-  //       next: (res: any) => {
-  //         alert('Updated');
-  //         this._router.navigate(['/test/view-test']);
-  //       },
-  //       error: (err: any) => {
-  //         console.error(err);
-  //         alert('Error updating employee.');
-  //       },
-  //     });
-  //   }
-
-  //   else {
-  //     const formData = new FormData();
-
-  //     formData.append(
-  //       'fname',
-  //       this.newMemberForm.get('memberDetail.fname')?.value
-  //     );
-
-  //     formData.append(
-  //       'lname',
-  //       this.newMemberForm.get('memberDetail.lname')?.value
-  //     );
-
-  //     formData.append('image', this.file_arr);
-
-  //     this._memberService.addMember(formData).subscribe({
-  //       next: (res: any) => {
-  //         alert('Member Added Successfully');
-  //       },
-  //       error: (err: any) => {
-  //         if (err && err.error && err.error.errors) {
-  //           const errorMessages = Object.values(err.error.errors).flat();
-  //           const errorMessage = errorMessages.join('\n');
-  //           console.log('error ' + err);
-  //         } else {
-  //           console.error(err);
-  //           alert('An unknown error occurred.');
-  //         }
-  //       },
-  //     });
-  //   }
-  // }
-
+  /* Previous implementation of the onSave method.
+     Separated code for adding and editing members and had some repetitions. */
+  /*
   onSave() {
-    const id = this._activeRoute.snapshot.params['id'];
-    const formData = this.createFormData();
+    ...
+  }
+  */
+
+  // Method to handle saving, either adding a new member or updating an existing one
+  onSave() {
+    const id = this._activeRoute.snapshot.params['id']; // Get the id from the route
+    const formData = this.createFormData(); // Generate form data for the API call
 
     if (id) {
-      formData.append('_method', 'PUT'); // for PUT method
+      // If id exists, we are updating a member
+      formData.append('_method', 'PUT');
       this._memberService.editMember(id, formData).subscribe({
         next: () => {
           alert('Updated');
-          this._router.navigate(['/test/view-test']);
+          this._router.navigate(['/test/view-test']); // Navigate to view after update
         },
         error: (err) => this.handleError(err, 'Error updating member.'),
       });
     } else {
+      // If id doesn't exist, we are adding a new member
       this._memberService.addMember(formData).subscribe({
         next: () => alert('Member Added Successfully'),
         error: (err) => this.handleError(err, 'An unknown error occurred.'),
@@ -122,6 +68,7 @@ export class AddTestComponent implements OnInit {
     }
   }
 
+  // Utility method to create the FormData object for API calls
   createFormData() {
     const formData = new FormData();
     formData.append(
@@ -140,6 +87,7 @@ export class AddTestComponent implements OnInit {
     return formData;
   }
 
+  // Method to handle errors from API calls
   handleError(err: any, defaultErrorMsg: string) {
     console.error(err);
     if (err && err.error && err.error.errors) {
@@ -149,10 +97,12 @@ export class AddTestComponent implements OnInit {
       alert(defaultErrorMsg);
     }
   }
-  // =========================================================
+
+  // Fetches the data for editing a member
   getDataInEditForm() {
     const id = this._activeRoute.snapshot.params['id'];
     if (id) {
+      // If id exists, fetch member data for editing
       this._memberService.getMemberById(id).subscribe({
         next: (res: any) => {
           this.newMemberForm.patchValue({
@@ -163,8 +113,6 @@ export class AddTestComponent implements OnInit {
           });
           this.displayedImageUrl = res.memberDetail.image;
           this.currentImageUrl = res.memberDetail.image;
-          console.log(res);
-          console.log(this.currentImageUrl);
         },
         error: (err: any) => {
           console.error(err);
@@ -173,28 +121,8 @@ export class AddTestComponent implements OnInit {
       });
     }
   }
-  // =============================================================
-  // getDataInEditForm() {
-  //   const id = this._activeRoute.snapshot.params['id'];
 
-  //   if (!id) return;
-
-  //   this._memberService.getMemberById(id).subscribe(
-  //     (res: any) => {
-  //       const { fname, lname, image } = res.memberDetail;
-
-  //       this.newMemberForm.patchValue({
-  //         memberDetail: { fname, lname },
-  //       });
-
-  //       this.displayedImageUrl = this.currentImageUrl = image;
-  //     },
-  //     (err: any) => {
-  //       console.error(err);
-  //       alert('Error fetching member data.');
-  //     }
-  //   );
-  // }
+  // Initialize the form and fetch data if in edit mode
   ngOnInit(): void {
     this.newMemberForm = this._fb.group({
       memberDetail: this._fb.group({

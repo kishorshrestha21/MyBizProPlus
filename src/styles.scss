@@ -83,3 +83,23 @@ body {
   display: flex;
   column-gap: 10px;
 }
+.dailogHead {
+  max-height: 35px;
+  text-align: center;
+  background-color: #3f51b5;
+  color: white;
+  padding: 4px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.dailogHead p {
+  line-height: 5px;
+}
+
+.dialogAction {
+  padding: 0px 20px 25px;
+  button {
+    flex: 1;
+  }
+}

@@ -13,6 +13,7 @@ import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-pur
 import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
 import { SettingComponent } from './Components/Settings/setting/setting.component';
 import { BrandComponent } from './Components/Settings/Brand/brand/brand.component';
+import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -67,6 +68,7 @@ const routes: Routes = [
   {
     path: 'brand',
     component: BrandComponent,
+    children: [{ path: 'add-Brand', component: AddBrandComponent }],
   },
 
   {
