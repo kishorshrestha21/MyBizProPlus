@@ -2,7 +2,6 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  OnDestroy,
   OnInit,
 } from '@angular/core';
 import { HeaderService } from 'src/app/Services/header.service';
@@ -12,18 +11,20 @@ import { HeaderService } from 'src/app/Services/header.service';
   templateUrl: './brand.component.html',
   styleUrls: ['./brand.component.scss'],
 })
-export class BrandComponent implements AfterViewInit {
+export class BrandComponent implements AfterViewInit, OnInit {
   btnLinkText: string = '';
   btnLink: string = '';
   constructor(
     private _headerService: HeaderService,
     private _cdRef: ChangeDetectorRef
   ) {}
+  ngOnInit(): void {
+    this._headerService.headerTitle.next('Brand List');
+  }
 
   ngAfterViewInit(): void {
-    this._headerService.linkBtn.subscribe((res) => {
-      this.btnLink = res;
-      // for NG0100: Expression has changed after it was checked error
+    this._headerService.linkBtnText.subscribe((res) => {
+      this.btnLinkText = res;
       this._cdRef.detectChanges();
     });
   }
