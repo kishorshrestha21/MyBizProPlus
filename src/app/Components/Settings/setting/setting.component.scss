@@ -1,0 +1,59 @@
+.settingWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.settingList {
+  position: relative;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.settingTest {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.settingWrap > div:nth-child(1) {
+  background-color: rgb(161, 97, 97);
+  border-radius: 5px;
+}
+
+.settingWrap > div:nth-child(2) {
+  background-color: rgb(71, 71, 117);
+  border-radius: 5px;
+}
+
+.settingWrap > div:nth-child(3) {
+  background-color: rgb(71, 113, 71);
+  border-radius: 5px;
+}
+
+.settingWrap > div:nth-child(4) {
+  background-color: rgb(99, 99, 56);
+  border-radius: 5px;
+}
+.settingWrap > div:nth-child(5) {
+  background-color: rgb(141, 88, 65);
+  border-radius: 5px;
+}
+.settingWrap > div:nth-child(6) {
+  background-color: rgb(75, 106, 124);
+  border-radius: 5px;
+}
+
+.settingWrap > div:nth-child(7) {
+  background-color: rgb(66, 115, 76);
+  border-radius: 5px;
+}

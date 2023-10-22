@@ -37,6 +37,13 @@ export class SidenavComponent {
       name: 'Purchase',
       link: '/purchase',
     },
+
+    {
+      icon: 'settings',
+      name: 'Settings',
+      link: 'setting',
+    },
+
     {
       icon: 'people',
       name: 'Test',

@@ -11,6 +11,8 @@ import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { PurchaseComponent } from './Components/Purchase/purchase/purchase.component';
 import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
 import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
+import { SettingComponent } from './Components/Settings/setting/setting.component';
+import { BrandComponent } from './Components/Settings/Brand/brand/brand.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -55,6 +57,16 @@ const routes: Routes = [
       { path: 'view-purchase', component: ViewPurchaseComponent },
       { path: '', component: ViewPurchaseComponent },
     ],
+  },
+
+  {
+    path: 'setting',
+    component: SettingComponent,
+  },
+
+  {
+    path: 'brand',
+    component: BrandComponent,
   },
 
   {

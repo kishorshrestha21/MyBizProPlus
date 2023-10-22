@@ -71,3 +71,15 @@ body {
   width: 100%;
   overflow-x: auto;
 }
+
+.links {
+  position: fixed;
+  top: 4.5rem;
+  right: 10px;
+  z-index: 100;
+}
+
+.linkBtn {
+  display: flex;
+  column-gap: 10px;
+}

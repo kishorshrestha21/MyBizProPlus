@@ -1,14 +1,20 @@
-import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { HeaderService } from 'src/app/Services/header.service';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.scss'],
+  selector: 'app-brand',
+  templateUrl: './brand.component.html',
+  styleUrls: ['./brand.component.scss'],
 })
-export class EmployeeComponent implements AfterViewInit {
-  btnLink: string = '';
+export class BrandComponent implements AfterViewInit {
   btnLinkText: string = '';
+  btnLink: string = '';
   constructor(
     private _headerService: HeaderService,
     private _cdRef: ChangeDetectorRef
@@ -18,11 +24,6 @@ export class EmployeeComponent implements AfterViewInit {
     this._headerService.linkBtn.subscribe((res) => {
       this.btnLink = res;
       // for NG0100: Expression has changed after it was checked error
-      this._cdRef.detectChanges();
-    });
-
-    this._headerService.linkBtnText.subscribe((res) => {
-      this.btnLinkText = res;
       this._cdRef.detectChanges();
     });
   }

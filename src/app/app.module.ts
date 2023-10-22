@@ -30,6 +30,15 @@ import { PurchaseComponent } from './Components/Purchase/purchase/purchase.compo
 import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
 import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
 import { PurchaseReportComponent } from './Components/Purchase/purchase-report/purchase-report.component';
+import { SettingComponent } from './Components/Settings/setting/setting.component';
+import { TaxComponent } from './Components/Settings/tax/tax.component';
+import { BrandComponent } from './Components/Settings/Brand/brand/brand.component';
+import { UnitComponent } from './Components/Settings/unit/unit.component';
+import { SizeComponent } from './Components/Settings/size/size.component';
+import { CardComponent } from './Components/Settings/card/card.component';
+import { PassCodeComponent } from './Components/Settings/pass-code/pass-code.component';
+import { RewardComponent } from './Components/Settings/reward/reward.component';
+import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +61,15 @@ import { PurchaseReportComponent } from './Components/Purchase/purchase-report/p
     AddPurchaseComponent,
     ViewPurchaseComponent,
     PurchaseReportComponent,
+    SettingComponent,
+    TaxComponent,
+    BrandComponent,
+    UnitComponent,
+    SizeComponent,
+    CardComponent,
+    PassCodeComponent,
+    RewardComponent,
+    AddBrandComponent,
   ],
   imports: [
     BrowserModule,
