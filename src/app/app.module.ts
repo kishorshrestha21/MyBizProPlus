@@ -9,9 +9,7 @@ import { HeaderComponent } from './Components/FrontPage/header/header.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesModule } from './allModules/services/services.module';
 import { MaterialModule } from './allModules/material/material.module';
-
 import { DashboardComponent } from './Components/FrontPage/dashboard/dashboard.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
@@ -32,13 +30,14 @@ import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-
 import { PurchaseReportComponent } from './Components/Purchase/purchase-report/purchase-report.component';
 import { SettingComponent } from './Components/Settings/setting/setting.component';
 import { TaxComponent } from './Components/Settings/tax/tax.component';
-import { BrandComponent } from './Components/Settings/Brand/brand/brand.component';
+import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
 import { UnitComponent } from './Components/Settings/unit/unit.component';
 import { SizeComponent } from './Components/Settings/size/size.component';
-import { CardComponent } from './Components/Settings/card/card.component';
+import { CardComponent } from './Components/Settings/Card/card/card.component';
 import { PassCodeComponent } from './Components/Settings/pass-code/pass-code.component';
 import { RewardComponent } from './Components/Settings/reward/reward.component';
 import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
+import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
 
 @NgModule({
   declarations: [
@@ -66,10 +65,11 @@ import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-bra
     BrandComponent,
     UnitComponent,
     SizeComponent,
-    CardComponent,
     PassCodeComponent,
     RewardComponent,
     AddBrandComponent,
+    CardComponent,
+    AddCardComponent,
   ],
   imports: [
     BrowserModule,

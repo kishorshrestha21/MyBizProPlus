@@ -83,6 +83,38 @@
       "id": 5
     }
   ],
+  "brand": [
+    {
+      "brand": "test",
+      "logo": "C:\\fakepath\\img2.jpg",
+      "id": 2
+    },
+    {
+      "brand": "test",
+      "logo": "C:\\fakepath\\img2.jpg",
+      "id": 3
+    },
+    {
+      "brand": "test",
+      "logo": "C:\\fakepath\\img2.jpg",
+      "id": 4
+    },
+    {
+      "brand": "test",
+      "logo": "C:\\fakepath\\img.7jpg.jpg",
+      "id": 5
+    },
+    {
+      "brand": "test2",
+      "logo": null,
+      "id": 6
+    },
+    {
+      "brand": "n",
+      "logo": null,
+      "id": 7
+    }
+  ],
   "member": [
     {
       "fname": "Test",

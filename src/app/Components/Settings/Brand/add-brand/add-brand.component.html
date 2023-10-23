@@ -11,6 +11,7 @@
   </div>
   <div class="fileUpload">
     <button
+      type="button"
       mat-raised-button
       color="primary"
       (click)="brandLogo.click()"
@@ -30,6 +31,7 @@
     </span>
 
     <input
+      hidden
       type="file"
       #brandLogo
       (change)="onUploadLogo($event)"

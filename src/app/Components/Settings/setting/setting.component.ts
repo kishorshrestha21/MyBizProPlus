@@ -19,7 +19,7 @@ export class SettingComponent implements OnInit, OnDestroy {
     {
       name: 'card',
       linkText: 'card',
-      link: 'card',
+      link: '/card',
     },
     {
       name: 'pass code',

@@ -12,8 +12,10 @@ import { PurchaseComponent } from './Components/Purchase/purchase/purchase.compo
 import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
 import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
 import { SettingComponent } from './Components/Settings/setting/setting.component';
-import { BrandComponent } from './Components/Settings/Brand/brand/brand.component';
+import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
 import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
+import { CardComponent } from './Components/Settings/Card/card/card.component';
+import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -69,6 +71,12 @@ const routes: Routes = [
     path: 'brand',
     component: BrandComponent,
     children: [{ path: 'add-Brand', component: AddBrandComponent }],
+  },
+
+  {
+    path: 'card',
+    component: CardComponent,
+    children: [{ path: 'add-card', component: AddCardComponent }],
   },
 
   {

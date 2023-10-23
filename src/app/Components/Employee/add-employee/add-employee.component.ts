@@ -20,7 +20,7 @@ export class AddEmployeeComponent implements OnInit, OnDestroy {
   [x: string]: any;
   employeeForm: any;
   toppings: any;
-  file_arr: any;
+  // file_arr: any;
   idFileInput: any;
   fileName: string = '';
   idFileName: any = '';

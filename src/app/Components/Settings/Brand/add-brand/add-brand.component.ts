@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { BrandService } from 'src/app/Services/brand.service';
 
 @Component({
   selector: 'app-add-brand',
@@ -10,8 +11,11 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class AddBrandComponent implements OnInit {
   fileName: string = '';
   buttonName: string = 'Upload Photo';
+  brands: any[] = [];
+  brandImage: any;
 
   constructor(
+    private _brandService: BrandService,
     private _dialogRef: MatDialogRef<AddBrandComponent>,
     private _fb: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public _data: any
@@ -23,6 +27,7 @@ export class AddBrandComponent implements OnInit {
     const brandLogo: File = event.target.files ? event.target.files[0] : null;
 
     if (brandLogo) {
+      this.brandImage = brandLogo;
       this.fileName = brandLogo.name;
     }
   }
@@ -31,7 +36,14 @@ export class AddBrandComponent implements OnInit {
     brandLogo.value = '';
     this.fileName = '';
   }
-  barndSave() {}
+  barndSave() {
+    this._brandService.addBrand(this.brandForm.value).subscribe({
+      next: (res: any) => {
+        alert('Data Added');
+        this._dialogRef.close(true);
+      },
+    });
+  }
 
   ngOnInit(): void {
     this.brandForm = this._fb.group({
