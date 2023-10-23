@@ -85,7 +85,7 @@
   ],
   "brand": [
     {
-      "brand": "test",
+      "brand": "tested",
       "logo": "C:\\fakepath\\img2.jpg",
       "id": 2
     },
@@ -113,6 +113,26 @@
       "brand": "n",
       "logo": null,
       "id": 7
+    },
+    {
+      "brand": "test1",
+      "logo": "C:\\fakepath\\img2.jpg",
+      "id": 10
+    },
+    {
+      "brand": "n1",
+      "logo": null,
+      "id": 11
+    },
+    {
+      "brand": "test21",
+      "logo": "C:\\fakepath\\img2.jpg",
+      "id": 12
+    },
+    {
+      "brand": "h",
+      "logo": "C:\\fakepath\\img.7jpg.jpg",
+      "id": 13
     }
   ],
   "member": [

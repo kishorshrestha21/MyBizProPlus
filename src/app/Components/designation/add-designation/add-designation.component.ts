@@ -52,7 +52,6 @@ export class AddDesignationComponent {
       designation: [''],
     });
     this.designationForm.patchValue(this._data);
-    // this._headerService.linkBtnText.next('View Designation');
   }
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');

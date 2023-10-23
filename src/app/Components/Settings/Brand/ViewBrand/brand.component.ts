@@ -31,6 +31,13 @@ export class BrandComponent implements AfterViewInit, OnInit, OnDestroy {
 
   openAddBrand() {
     const dialogRef = this._dialogBox.open(AddBrandComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (res) => {
+        if (res) {
+          this.getBrandData();
+        }
+      },
+    });
   }
 
   getBrandData() {
@@ -49,6 +56,21 @@ export class BrandComponent implements AfterViewInit, OnInit, OnDestroy {
     }
     this.getBrandData();
   }
+
+  editBrand(data: any) {
+    const dialogRef = this._dialogBox.open(AddBrandComponent, {
+      data,
+    });
+    dialogRef.afterClosed().subscribe({
+      next: (res) => {
+        if (res) {
+          this.getBrandData();
+        }
+      },
+    });
+    console.log('Editing brand with data:', data);
+  }
+
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');
     this._headerService.linkBtnText.next('');

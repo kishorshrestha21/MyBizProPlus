@@ -21,4 +21,12 @@ export class BrandService {
   deletBrand(id: number): Observable<any> {
     return this._http.delete(`${this.branAPI}/${id}`);
   }
+
+  getBrandByData(id: number) {
+    return this._http.get(`${this.branAPI}/${id}`);
+  }
+
+  updateBrand(id: number, data: any): Observable<any> {
+    return this._http.put(`${this.branAPI}/${id}`, data);
+  }
 }

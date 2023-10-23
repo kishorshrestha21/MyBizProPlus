@@ -17,7 +17,7 @@
       <td>{{ brand.brand }}</td>
       <td><img src="{{ brand.logo }}" alt="none" /></td>
       <td>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="editBrand(brand)">
           <mat-icon color="primary">edit</mat-icon>
         </button>
         <button (click)="deleteBrandById(brand.id)" mat-icon-button>
