@@ -37,12 +37,26 @@ export class AddBrandComponent implements OnInit {
     this.fileName = '';
   }
   barndSave() {
-    this._brandService.addBrand(this.brandForm.value).subscribe({
-      next: (res: any) => {
-        alert('Data Added');
-        this._dialogRef.close(true);
-      },
-    });
+    if (this._data) {
+      this._brandService
+        .updateBrand(this._data.id, this.brandForm.value)
+        .subscribe({
+          next: (res) => {
+            alert('Updated');
+            this._dialogRef.close(true);
+          },
+          error: (err) => {
+            console.error('Error updating brand:', err);
+          },
+        });
+    } else {
+      this._brandService.addBrand(this.brandForm.value).subscribe({
+        next: (res: any) => {
+          alert('Data Added');
+          this._dialogRef.close(true);
+        },
+      });
+    }
   }
 
   ngOnInit(): void {
@@ -50,5 +64,15 @@ export class AddBrandComponent implements OnInit {
       brand: ['', Validators.required],
       logo: [null],
     });
+
+    if (this._data) {
+      // checking if data exists
+      this.brandForm.patchValue({
+        brand: this._data.brand,
+        logo: this._data.logo,
+      });
+      //displaying the logo's filename when editing
+      this.fileName = this._data.logo;
+    }
   }
 }
