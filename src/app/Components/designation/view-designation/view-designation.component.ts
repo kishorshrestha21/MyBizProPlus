@@ -45,7 +45,7 @@ export class ViewDesignationComponent {
   }
 
   onDeleteDesignation(id: number) {
-    if (window.confirm('Are sure you want to delete this item ?')) {
+    if (window.confirm('Are you sure you want to delete this item?')) {
       this._designationService.deleteDesignation(id).subscribe({
         next: (res) => {
           alert('deleted');
