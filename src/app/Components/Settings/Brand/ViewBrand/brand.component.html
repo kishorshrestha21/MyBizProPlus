@@ -3,27 +3,28 @@
     {{ btnLinkText }}
   </button>
 </div>
-
-<table>
-  <thead>
-    <th>S.No</th>
-    <th>Brand Name</th>
-    <th>Logo</th>
-    <th>Action</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let brand of brands; index as i">
-      <td>{{ i + 1 }}</td>
-      <td>{{ brand.brand }}</td>
-      <td><img src="{{ brand.logo }}" alt="none" /></td>
-      <td>
-        <button mat-icon-button (click)="editBrand(brand)">
-          <mat-icon color="primary">edit</mat-icon>
-        </button>
-        <button (click)="deleteBrandById(brand.id)" mat-icon-button>
-          <mat-icon color="warn">delete</mat-icon>
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="tableWrap">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Brand Name</th>
+      <th>Logo</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let brand of brands; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ brand.brand }}</td>
+        <td><img src="{{ brand.logo }}" alt="none" /></td>
+        <td>
+          <button mat-icon-button (click)="editBrand(brand)">
+            <mat-icon color="primary">edit</mat-icon>
+          </button>
+          <button (click)="deleteBrandById(brand.id)" mat-icon-button>
+            <mat-icon color="warn">delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
