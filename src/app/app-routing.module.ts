@@ -70,13 +70,13 @@ const routes: Routes = [
   {
     path: 'brand',
     component: BrandComponent,
-    children: [{ path: 'add-Brand', component: AddBrandComponent }],
+    children: [{ path: 'add-brand', component: AddBrandComponent }],
   },
 
   {
     path: 'card',
     component: CardComponent,
-    children: [{ path: 'add-card', component: AddCardComponent }],
+    // children: [{ path: 'add-card', component: AddCardComponent }],
   },
 
   {

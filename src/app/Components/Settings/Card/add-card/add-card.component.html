@@ -1,1 +1,49 @@
-<p>add-card works!</p>
+<div class="dialogHead">
+  <p>Card Form</p>
+</div>
+
+<form [formGroup]="cardForm">
+  <div class="cardFrom" mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Card Name</mat-label>
+      <input type="text" matInput formControlName="cardName" />
+    </mat-form-field>
+  </div>
+  <div class="fileUpload">
+    <button
+      type="button"
+      mat-raised-button
+      color="accent"
+      (click)="cardImg.click()"
+    >
+      <mat-icon>attach_file</mat-icon>
+      <span>{{ fileName ? fileName : buttonName }}</span>
+    </button>
+    <span class="closeButton">
+      <mat-icon *ngIf="fileName" (click)="deleteCargImg(cardImg)"
+        >close</mat-icon
+      >
+    </span>
+  </div>
+
+  <input
+    hidden
+    type="file"
+    #cardImg
+    (change)="onUploadCardImg($event)"
+    formControlNam="cardImg "
+  />
+  <div mat-dialog-actions class="dialogAction">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      mat-dialog-close="false"
+    >
+      Cancel
+    </button>
+    <button mat-raised-button color="primary">
+      {{ _data ? "Update" : "Save" }}
+    </button>
+  </div>
+</form>

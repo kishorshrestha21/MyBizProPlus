@@ -1,4 +1,4 @@
-<div class="dailogHead">
+<div class="dialogHead">
   <p>Brand Form</p>
 </div>
 
@@ -9,6 +9,7 @@
       <input type="text" matInput formControlName="brand" />
     </mat-form-field>
   </div>
+
   <div class="fileUpload">
     <button
       type="button"
@@ -31,7 +32,6 @@
     </span>
 
     <input
-      hidden
       type="file"
       #brandLogo
       (change)="onUploadLogo($event)"
