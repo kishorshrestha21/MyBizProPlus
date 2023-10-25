@@ -14,7 +14,7 @@ import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-
 import { SettingComponent } from './Components/Settings/setting/setting.component';
 import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
 import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
-import { CardComponent } from './Components/Settings/Card/card/card.component';
+import { CardComponent } from './Components/Settings/Card/view-card/card.component';
 import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
 
 const routes: Routes = [

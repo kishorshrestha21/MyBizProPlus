@@ -3,7 +3,14 @@
   margin-bottom: 20px;
   margin-top: -20px;
 }
+.dialogAction {
+  padding: 0 20px;
+}
 .fileUpload button {
   width: 100%;
   height: 55px;
+}
+
+.brandForm mat-form-field {
+  width: 100%; /* or any custom width */
 }
