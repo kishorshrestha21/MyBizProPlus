@@ -8,14 +8,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./add-card.component.scss'],
 })
 export class AddCardComponent implements OnInit {
-  fileName: string = '';
-  buttonName: string = 'Upload Photo';
   constructor(
     private _dialogRef: MatDialogRef<AddCardComponent>,
     @Inject(MAT_DIALOG_DATA) public _data: any,
     private _fb: FormBuilder
   ) {}
 
+  fileName: string = '';
+  buttonName: string = 'Upload Photo';
   cardForm!: FormGroup;
 
   cardsForm() {
