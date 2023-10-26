@@ -1,5 +1,21 @@
+<div class="backBtn"></div>
+
 <div class="links">
-  <button mat-raised-button color="accent" (click)="openAddCard()">
+  <button
+    class="linkBtn"
+    mat-raised-button
+    color="accent"
+    routerLink="/setting"
+  >
+    Back
+  </button>
+
+  <button
+    class="linkBtn"
+    mat-raised-button
+    color="accent"
+    (click)="openAddCard()"
+  >
     Add Card
   </button>
 </div>

@@ -24,7 +24,7 @@ export class SettingComponent implements OnInit, OnDestroy {
     {
       name: 'pass code',
       linkText: 'pass code',
-      link: 'pass-code',
+      link: '/passcode',
     },
     {
       name: 'reward',

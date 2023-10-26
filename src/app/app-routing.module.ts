@@ -16,6 +16,7 @@ import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.comp
 import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
 import { CardComponent } from './Components/Settings/Card/view-card/card.component';
 import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
+import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -77,6 +78,11 @@ const routes: Routes = [
     path: 'card',
     component: CardComponent,
     // children: [{ path: 'add-card', component: AddCardComponent }],
+  },
+
+  {
+    path: 'passcode',
+    component: PassCodeComponent,
   },
 
   {

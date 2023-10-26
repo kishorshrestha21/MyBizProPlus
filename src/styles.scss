@@ -73,15 +73,22 @@ body {
 }
 
 .links {
+  display: flex;
+  column-gap: 10px;
   position: fixed;
   top: 4.5rem;
   right: 10px;
   z-index: 100;
 }
-
-.linkBtn {
+.backBtn {
   display: flex;
   column-gap: 10px;
+  position: fixed;
+  top: 4.5rem;
+  left: 10px;
+  z-index: 100;
+}
+.linkBtn {
 }
 .dialogHead {
   max-height: 35px;

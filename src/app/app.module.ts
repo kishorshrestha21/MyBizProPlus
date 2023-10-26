@@ -34,10 +34,11 @@ import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.comp
 import { UnitComponent } from './Components/Settings/unit/unit.component';
 import { SizeComponent } from './Components/Settings/size/size.component';
 import { CardComponent } from './Components/Settings/Card/view-card/card.component';
-import { PassCodeComponent } from './Components/Settings/pass-code/pass-code.component';
+import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
 import { RewardComponent } from './Components/Settings/reward/reward.component';
 import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
 import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
+import { AddPasscodeComponent } from './Components/Settings/Passcode/add-passcode/add-passcode.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.c
     AddBrandComponent,
     CardComponent,
     AddCardComponent,
+    AddPasscodeComponent,
   ],
   imports: [
     BrowserModule,
