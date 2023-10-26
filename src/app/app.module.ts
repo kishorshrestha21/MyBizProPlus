@@ -41,6 +41,8 @@ import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.c
 import { AddPasscodeComponent } from './Components/Settings/Passcode/add-passcode/add-passcode.component';
 import { AddSizeComponent } from './Components/Settings/Size/add-size/add-size.component';
 import { AddUnitComponent } from './Components/Settings/Unit/add-unit/add-unit.component';
+import { AddVendorComponent } from './Components/Vender/add-vendor/add-vendor.component';
+import { ViewVendorComponent } from './Components/Vender/view-vendor/view-vendor.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { AddUnitComponent } from './Components/Settings/Unit/add-unit/add-unit.c
     AddPasscodeComponent,
     AddSizeComponent,
     AddUnitComponent,
+    AddVendorComponent,
+    ViewVendorComponent,
   ],
   imports: [
     BrowserModule,

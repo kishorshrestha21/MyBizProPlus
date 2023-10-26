@@ -19,6 +19,7 @@ import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.c
 import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
 import { SizeComponent } from './Components/Settings/Size/view-size/view-size.component';
 import { UnitComponent } from './Components/Settings/Unit/view-unit/view-unit.component';
+import { ViewVendorComponent } from './Components/Vender/view-vendor/view-vendor.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -93,6 +94,8 @@ const routes: Routes = [
   },
 
   { path: 'unit', component: UnitComponent },
+
+  { path: 'vendor', component: ViewVendorComponent },
 
   {
     path: 'test2',

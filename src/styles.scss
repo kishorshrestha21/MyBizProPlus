@@ -90,9 +90,19 @@ body {
 }
 .linkBtn {
 }
+// ====================================
+.fileUpload {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.fileUpload button {
+  width: 100%;
+  height: 55px !important;
+}
 // ==========Dailog======================
 .dialogHead {
-  max-height: 35px;
+  height: 55px;
   text-align: center;
   background-color: #3f51b5;
   // background-color: #ff4081;
@@ -104,7 +114,7 @@ body {
 }
 
 .dialogHead p {
-  line-height: 5px;
+  line-height: 25px;
 }
 
 .dialogBox {
@@ -112,9 +122,12 @@ body {
 }
 
 .dialogAction {
-  padding: 0px 20px 25px;
+  padding: 0px 20px !important;
+
   button {
     flex: 1;
+    height: 55px !important;
+    margin-bottom: 10px;
   }
 }
 // =======Table======

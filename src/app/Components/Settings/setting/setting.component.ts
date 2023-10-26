@@ -20,10 +20,10 @@ export class SettingComponent implements OnInit, OnDestroy {
       name: 'card',
       linkText: 'card',
       link: '/card',
-      icon: 'payment',
+      icon: 'credit_card',
     },
     {
-      name: 'pass code',
+      name: 'pincode',
       linkText: 'pass code',
       link: '/passcode',
       icon: 'blur_on',
@@ -32,7 +32,7 @@ export class SettingComponent implements OnInit, OnDestroy {
       name: 'reward',
       linkText: 'reward',
       link: 'reward',
-      icon: 'add_to_photos',
+      icon: 'attach_money',
     },
     {
       name: 'size',
@@ -44,7 +44,7 @@ export class SettingComponent implements OnInit, OnDestroy {
       name: 'tax',
       linkText: 'tax',
       link: '/tax',
-      icon: 'attach_money',
+      icon: 'add_to_photos',
     },
     {
       name: 'unit',

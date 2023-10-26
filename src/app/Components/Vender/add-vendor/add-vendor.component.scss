@@ -1,0 +1,24 @@
+.infoGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.addressGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.keyPersonGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dialogAction {
+  padding: 0 20px;
+}

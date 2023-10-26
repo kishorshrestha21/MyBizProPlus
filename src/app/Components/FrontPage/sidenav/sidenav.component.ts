@@ -45,6 +45,12 @@ export class SidenavComponent {
     },
 
     {
+      icon: 'perm_contact_calendar',
+      name: 'Vendor',
+      link: 'vendor',
+    },
+
+    {
       icon: 'people',
       name: 'Test',
       link: '/test',

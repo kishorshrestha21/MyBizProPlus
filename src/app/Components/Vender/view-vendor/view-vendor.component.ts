@@ -15,7 +15,9 @@ export class ViewVendorComponent implements OnInit, OnDestroy {
   ) {}
 
   openAddVendor() {
-    this._matDialog.open(AddVendorComponent);
+    this._matDialog.open(AddVendorComponent, {
+      width: '100%',
+    });
   }
 
   ngOnInit(): void {
