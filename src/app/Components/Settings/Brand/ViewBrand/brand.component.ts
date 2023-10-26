@@ -32,7 +32,6 @@ export class BrandComponent implements AfterViewInit, OnInit, OnDestroy {
   openAddBrand() {
     const dialogRef = this._dialogBox.open(AddBrandComponent, {
       width: '400px',
-      height: '300px',
     });
     dialogRef.afterClosed().subscribe({
       next: (res) => {

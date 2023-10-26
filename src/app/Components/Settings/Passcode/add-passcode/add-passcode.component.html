@@ -1,24 +1,29 @@
-<div class="dialogHead">
-  <P>Passcode Form</P>
+<div class="dialogBox">
+  <div class="dialogHead">
+    <P>Passcode Form</P>
+  </div>
+  <form [formGroup]="passcodeForm">
+    <div class="passcodeForm" mat-dialog-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Passcode</mat-label>
+        <input type="text" matInput formControlName="passcode" />
+      </mat-form-field>
+    </div>
+
+    <div class="test">
+      <div class="dialogAction" mat-dialog-actions>
+        <button
+          mat-raised-button
+          color="warn"
+          type="button"
+          mat-dialog-close="false"
+        >
+          Cancel
+        </button>
+        <button mat-raised-button color="primary">
+          {{ _data ? "Update" : "Save" }}
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
-<form [formGroup]="passcodeForm">
-  <div class="passcodeForm" mat-dialog-content>
-    <mat-form-field appearance="outline">
-      <mat-label>Passcode</mat-label>
-      <input type="text" matInput formControlName="passcode" />
-    </mat-form-field>
-  </div>
-  <div class="dialogAction" mat-dialog-actions>
-    <button
-      mat-raised-button
-      color="warn"
-      type="button"
-      mat-dialog-close="false"
-    >
-      Cancel
-    </button>
-    <button mat-raised-button color="primary">
-      {{ _data ? "Update" : "Save" }}
-    </button>
-  </div>
-</form>

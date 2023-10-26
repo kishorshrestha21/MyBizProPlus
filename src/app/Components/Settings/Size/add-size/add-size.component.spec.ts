@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SizeComponent } from './size.component';
+import { AddSizeComponent } from './add-size.component';
 
-describe('SizeComponent', () => {
-  let component: SizeComponent;
-  let fixture: ComponentFixture<SizeComponent>;
+describe('AddSizeComponent', () => {
+  let component: AddSizeComponent;
+  let fixture: ComponentFixture<AddSizeComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SizeComponent]
+      declarations: [AddSizeComponent]
     });
-    fixture = TestBed.createComponent(SizeComponent);
+    fixture = TestBed.createComponent(AddSizeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
