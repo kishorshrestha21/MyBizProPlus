@@ -1,7 +1,9 @@
 <div class="settingWrap">
   <div *ngFor="let setting of settingLists">
     <div class="settingList" routerLink="{{ setting.link }}">
-      <div class="settingTest">
+      <div class="settingContent">
+        <mat-icon>{{ setting.icon }}</mat-icon
+        ><br />
         {{ setting.name | titlecase }}
       </div>
     </div>

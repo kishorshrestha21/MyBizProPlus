@@ -31,7 +31,7 @@ import { PurchaseReportComponent } from './Components/Purchase/purchase-report/p
 import { SettingComponent } from './Components/Settings/setting/setting.component';
 import { TaxComponent } from './Components/Settings/tax/tax.component';
 import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
-import { UnitComponent } from './Components/Settings/unit/unit.component';
+import { UnitComponent } from './Components/Settings/Unit/view-unit/view-unit.component';
 import { SizeComponent } from './Components/Settings/Size/view-size/view-size.component';
 import { CardComponent } from './Components/Settings/Card/view-card/card.component';
 import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
@@ -40,6 +40,7 @@ import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-bra
 import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
 import { AddPasscodeComponent } from './Components/Settings/Passcode/add-passcode/add-passcode.component';
 import { AddSizeComponent } from './Components/Settings/Size/add-size/add-size.component';
+import { AddUnitComponent } from './Components/Settings/Unit/add-unit/add-unit.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { AddSizeComponent } from './Components/Settings/Size/add-size/add-size.c
     AddCardComponent,
     AddPasscodeComponent,
     AddSizeComponent,
+    AddUnitComponent,
   ],
   imports: [
     BrowserModule,

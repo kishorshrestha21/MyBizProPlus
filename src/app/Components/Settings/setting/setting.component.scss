@@ -17,43 +17,46 @@
   font-size: 16px;
 }
 
-.settingTest {
+.settingContent {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  // color: white;
+}
+.settingContent mat-icon {
+  color: #3f51b5;
 }
 
-.settingWrap > div:nth-child(1) {
-  background-color: rgb(161, 97, 97);
-  border-radius: 5px;
-}
+// .settingWrap > div:nth-child(1) {
+//   background-color: rgb(161, 97, 97);
+//   border-radius: 5px;
+// }
 
-.settingWrap > div:nth-child(2) {
-  background-color: rgb(71, 71, 117);
-  border-radius: 5px;
-}
+// .settingWrap > div:nth-child(2) {
+//   background-color: rgb(71, 71, 117);
+//   border-radius: 5px;
+// }
 
-.settingWrap > div:nth-child(3) {
-  background-color: rgb(71, 113, 71);
-  border-radius: 5px;
-}
+// .settingWrap > div:nth-child(3) {
+//   background-color: rgb(71, 113, 71);
+//   border-radius: 5px;
+// }
 
-.settingWrap > div:nth-child(4) {
-  background-color: rgb(99, 99, 56);
-  border-radius: 5px;
-}
-.settingWrap > div:nth-child(5) {
-  background-color: rgb(141, 88, 65);
-  border-radius: 5px;
-}
-.settingWrap > div:nth-child(6) {
-  background-color: rgb(75, 106, 124);
-  border-radius: 5px;
-}
+// .settingWrap > div:nth-child(4) {
+//   background-color: rgb(99, 99, 56);
+//   border-radius: 5px;
+// }
+// .settingWrap > div:nth-child(5) {
+//   background-color: rgb(141, 88, 65);
+//   border-radius: 5px;
+// }
+// .settingWrap > div:nth-child(6) {
+//   background-color: rgb(75, 106, 124);
+//   border-radius: 5px;
+// }
 
-.settingWrap > div:nth-child(7) {
-  background-color: rgb(66, 115, 76);
-  border-radius: 5px;
-}
+// .settingWrap > div:nth-child(7) {
+//   background-color: rgb(66, 115, 76);
+//   border-radius: 5px;
+// }

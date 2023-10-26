@@ -1,21 +1,19 @@
 <div class="dialogBox">
   <div class="dialogHead">
-    <p>Size Form</p>
+    <p>Unit Form</p>
   </div>
-
-  <form [formGroup]="sizeForm">
-    <div class="sizeForm" mat-dialog-content>
+  <form [formGroup]="unitForm">
+    <div class="unitForm" mat-dialog-content>
       <mat-form-field appearance="outline">
-        <mat-label>Size</mat-label>
-        <input type="text" matInput formControlName="size" />
+        <mat-label>Unit</mat-label>
+        <input type="text" matInput formControlName="unit" />
       </mat-form-field>
     </div>
-
     <div class="dialogAction" mat-dialog-actions>
       <button
-        type="button"
         mat-raised-button
         color="warn"
+        type="button"
         mat-dialog-close="false"
       >
         Cancel

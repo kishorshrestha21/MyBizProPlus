@@ -14,38 +14,43 @@ export class SettingComponent implements OnInit, OnDestroy {
       name: 'brand',
       linkText: 'brand',
       link: '/brand',
-      icon: 'branding_watermark',
+      icon: 'label',
     },
     {
       name: 'card',
       linkText: 'card',
       link: '/card',
+      icon: 'payment',
     },
     {
       name: 'pass code',
       linkText: 'pass code',
       link: '/passcode',
+      icon: 'blur_on',
     },
     {
       name: 'reward',
       linkText: 'reward',
       link: 'reward',
+      icon: 'add_to_photos',
     },
     {
       name: 'size',
       linkText: 'size',
-      link: 'size',
+      link: '/size',
+      icon: 'exposure',
     },
     {
       name: 'tax',
       linkText: 'tax',
-      link: 'tax',
+      link: '/tax',
+      icon: 'attach_money',
     },
     {
       name: 'unit',
       linkText: 'unit',
-      link: 'unit',
-      icon: '',
+      link: '/unit',
+      icon: 'layers',
     },
   ];
 

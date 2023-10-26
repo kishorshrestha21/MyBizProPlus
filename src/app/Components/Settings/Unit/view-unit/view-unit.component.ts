@@ -1,27 +1,25 @@
-import { DialogRef } from '@angular/cdk/dialog';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HeaderService } from 'src/app/Services/header.service';
-import { AddSizeComponent } from '../add-size/add-size.component';
+import { AddUnitComponent } from '../add-unit/add-unit.component';
 
 @Component({
-  selector: 'app-size',
-  templateUrl: './view-size.component.html',
-  styleUrls: ['./view-size.component.scss'],
+  selector: 'app-unit',
+  templateUrl: './view-unit.component.html',
+  styleUrls: ['./view-unit.component.scss'],
 })
-export class SizeComponent implements OnInit, OnDestroy {
+export class UnitComponent implements OnInit, OnDestroy {
   constructor(
     private _headerService: HeaderService,
     private _dialogBox: MatDialog
   ) {}
-
-  openAddSize() {
-    const dialogRef = this._dialogBox.open(AddSizeComponent, {
+  openAddUnit() {
+    this._dialogBox.open(AddUnitComponent, {
       width: '400px',
     });
   }
   ngOnInit(): void {
-    this._headerService.headerTitle.next('Size List');
+    this._headerService.headerTitle.next('Unit List');
   }
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');
