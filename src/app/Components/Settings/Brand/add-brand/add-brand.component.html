@@ -38,4 +38,17 @@
       formControlName="logo"
     />
   </div>
+  <div mat-dialog-actions class="dialogAction">
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      mat-dialog-close="false"
+    >
+      Cancel
+    </button>
+    <button mat-raised-button color="primary">
+      {{ _data ? "Update" : "Save" }}
+    </button>
+  </div>
 </form>
