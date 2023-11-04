@@ -85,59 +85,34 @@
   ],
   "brand": [
     {
-      "brand": "tested",
-      "logo": "C:\\fakepath\\img2.jpg",
+      "brand": "test",
+      "logo": null,
+      "id": 1
+    },
+    {
+      "brand": "1",
+      "logo": null,
       "id": 2
     },
     {
-      "brand": "test",
-      "logo": "C:\\fakepath\\img2.jpg",
+      "brand": "2",
+      "logo": null,
       "id": 3
     },
     {
-      "brand": "test",
-      "logo": "C:\\fakepath\\img2.jpg",
+      "brand": "3",
+      "logo": null,
       "id": 4
     },
     {
-      "brand": "test",
-      "logo": "C:\\fakepath\\img.7jpg.jpg",
+      "brand": "4",
+      "logo": null,
       "id": 5
     },
     {
-      "brand": "test2",
+      "brand": "5",
       "logo": null,
       "id": 6
-    },
-    {
-      "brand": "n",
-      "logo": null,
-      "id": 7
-    },
-    {
-      "brand": "test1",
-      "logo": "C:\\fakepath\\img2.jpg",
-      "id": 10
-    },
-    {
-      "brand": "n1",
-      "logo": null,
-      "id": 11
-    },
-    {
-      "brand": "test21",
-      "logo": "C:\\fakepath\\img2.jpg",
-      "id": 12
-    },
-    {
-      "brand": "h",
-      "logo": "C:\\fakepath\\img.7jpg.jpg",
-      "id": 13
-    },
-    {
-      "brand": "",
-      "logo": null,
-      "id": 14
     }
   ],
   "member": [

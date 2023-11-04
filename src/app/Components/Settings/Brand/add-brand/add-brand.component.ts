@@ -53,7 +53,8 @@ export class AddBrandComponent implements OnInit {
       this._brandService.addBrand(this.brandForm.value).subscribe({
         next: (res: any) => {
           alert('Data Added');
-          this._dialogRef.close(true);
+          // this._dialogRef.close(true);
+          this.brandForm.reset();
         },
       });
     }
