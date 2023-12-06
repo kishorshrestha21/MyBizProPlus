@@ -20,29 +20,6 @@ import { Test2Component } from './test2/test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
-import { RewardPointComponent } from './Components/Customer/reward-point/reward-point.component';
-import { EmployeeModule } from './allModules/employee/employee.module';
-import { TestModule } from './allModules/test/test.module';
-import { EmployeeFilterPipe } from './pipes/employee-filter.pipe';
-import { PurchaseComponent } from './Components/Purchase/purchase/purchase.component';
-import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
-import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
-import { PurchaseReportComponent } from './Components/Purchase/purchase-report/purchase-report.component';
-import { SettingComponent } from './Components/Settings/setting/setting.component';
-import { TaxComponent } from './Components/Settings/tax/tax.component';
-import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
-import { UnitComponent } from './Components/Settings/Unit/view-unit/view-unit.component';
-import { SizeComponent } from './Components/Settings/Size/view-size/view-size.component';
-import { CardComponent } from './Components/Settings/Card/view-card/card.component';
-import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
-import { RewardComponent } from './Components/Settings/reward/reward.component';
-import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
-import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
-import { AddPasscodeComponent } from './Components/Settings/Passcode/add-passcode/add-passcode.component';
-import { AddSizeComponent } from './Components/Settings/Size/add-size/add-size.component';
-import { AddUnitComponent } from './Components/Settings/Unit/add-unit/add-unit.component';
-import { AddVendorComponent } from './Components/Vender/add-vendor/add-vendor.component';
-import { ViewVendorComponent } from './Components/Vender/view-vendor/view-vendor.component';
 
 @NgModule({
   declarations: [
@@ -60,26 +37,6 @@ import { ViewVendorComponent } from './Components/Vender/view-vendor/view-vendor
     AddTest2Component,
     ViewTest2Component,
     IdTest2Component,
-    RewardPointComponent,
-    PurchaseComponent,
-    AddPurchaseComponent,
-    ViewPurchaseComponent,
-    PurchaseReportComponent,
-    SettingComponent,
-    TaxComponent,
-    BrandComponent,
-    UnitComponent,
-    SizeComponent,
-    PassCodeComponent,
-    RewardComponent,
-    AddBrandComponent,
-    CardComponent,
-    AddCardComponent,
-    AddPasscodeComponent,
-    AddSizeComponent,
-    AddUnitComponent,
-    AddVendorComponent,
-    ViewVendorComponent,
   ],
   imports: [
     BrowserModule,

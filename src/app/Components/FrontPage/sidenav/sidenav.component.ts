@@ -41,7 +41,7 @@ export class SidenavComponent {
     {
       icon: 'settings',
       name: 'Settings',
-      link: 'setting',
+      link: '/setting',
     },
 
     {

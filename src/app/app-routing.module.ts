@@ -8,18 +8,6 @@ import { Test2Component } from './test2/test2.component';
 import { ViewTest2Component } from './test2/view-test2/view-test2.component';
 import { IdTest2Component } from './test2/id-test2/id-test2.component';
 import { AddTest2Component } from './test2/add-test2/add-test2.component';
-import { PurchaseComponent } from './Components/Purchase/purchase/purchase.component';
-import { AddPurchaseComponent } from './Components/Purchase/add-purchase/add-purchase.component';
-import { ViewPurchaseComponent } from './Components/Purchase/view-purchase/view-purchase.component';
-import { SettingComponent } from './Components/Settings/setting/setting.component';
-import { BrandComponent } from './Components/Settings/Brand/ViewBrand/brand.component';
-import { AddBrandComponent } from './Components/Settings/Brand/add-brand/add-brand.component';
-import { CardComponent } from './Components/Settings/Card/view-card/card.component';
-import { AddCardComponent } from './Components/Settings/Card/add-card/add-card.component';
-import { PassCodeComponent } from './Components/Settings/Passcode/viewPassCode/pass-code.component';
-import { SizeComponent } from './Components/Settings/Size/view-size/view-size.component';
-import { UnitComponent } from './Components/Settings/Unit/view-unit/view-unit.component';
-import { ViewVendorComponent } from './Components/Vender/view-vendor/view-vendor.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -58,44 +46,19 @@ const routes: Routes = [
 
   {
     path: 'purchase',
-    component: PurchaseComponent,
-    children: [
-      { path: 'add-purchase', component: AddPurchaseComponent },
-      { path: 'view-purchase', component: ViewPurchaseComponent },
-      { path: '', component: ViewPurchaseComponent },
-    ],
+    loadChildren: () =>
+      import('./allModules/purchase/purchase.module').then(
+        (m) => m.PurchaseModule
+      ),
   },
 
   {
     path: 'setting',
-    component: SettingComponent,
+    loadChildren: () =>
+      import('./allModules/setting/setting.module').then(
+        (m) => m.SettingModule
+      ),
   },
-
-  {
-    path: 'brand',
-    component: BrandComponent,
-    children: [{ path: 'add-brand', component: AddBrandComponent }],
-  },
-
-  {
-    path: 'card',
-    component: CardComponent,
-    // children: [{ path: 'add-card', component: AddCardComponent }],
-  },
-
-  {
-    path: 'passcode',
-    component: PassCodeComponent,
-  },
-
-  {
-    path: 'size',
-    component: SizeComponent,
-  },
-
-  { path: 'unit', component: UnitComponent },
-
-  { path: 'vendor', component: ViewVendorComponent },
 
   {
     path: 'test2',

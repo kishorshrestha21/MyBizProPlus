@@ -2,27 +2,19 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/Services/header.service';
 
 @Component({
-  selector: 'app-setting',
-  templateUrl: './setting.component.html',
-  styleUrls: ['./setting.component.scss'],
+  selector: 'app-view-setting',
+  templateUrl: './view-setting.component.html',
+  styleUrls: ['./view-setting.component.scss'],
 })
-export class SettingComponent implements OnInit, OnDestroy {
+export class ViewSettingComponent implements OnInit, OnDestroy {
   constructor(private _headerService: HeaderService) {}
-  isSetting = true;
-  onSeting() {
-    this.isSetting = false;
-  }
 
-  onBack() {
-    this.isSetting = true;
-  }
   settingLists = [
     {
       name: 'brand',
       linkText: 'brand',
       link: 'brand',
       icon: 'label',
-      isSetting: false,
     },
     {
       name: 'card',
@@ -64,7 +56,6 @@ export class SettingComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._headerService.headerTitle.next('Settings');
-    this.isSetting = true;
   }
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');
