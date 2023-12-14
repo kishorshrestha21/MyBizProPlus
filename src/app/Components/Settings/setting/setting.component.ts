@@ -9,9 +9,9 @@ import { HeaderService } from 'src/app/Services/header.service';
 export class SettingComponent implements OnInit, OnDestroy {
   constructor(private _headerService: HeaderService) {}
   isSetting = true;
-  onSeting() {
-    this.isSetting = false;
-  }
+  // onSeting() {
+  //   this.isSetting = false;
+  // }
 
   onBack() {
     this.isSetting = true;
@@ -27,13 +27,13 @@ export class SettingComponent implements OnInit, OnDestroy {
     {
       name: 'card',
       linkText: 'card',
-      link: '/card',
+      link: 'card',
       icon: 'credit_card',
     },
     {
       name: 'pincode',
       linkText: 'pass code',
-      link: '/passcode',
+      link: 'passcode',
       icon: 'blur_on',
     },
     {
@@ -45,19 +45,19 @@ export class SettingComponent implements OnInit, OnDestroy {
     {
       name: 'size',
       linkText: 'size',
-      link: '/size',
+      link: 'size',
       icon: 'exposure',
     },
     {
       name: 'tax',
       linkText: 'tax',
-      link: '/tax',
+      link: 'tax',
       icon: 'add_to_photos',
     },
     {
       name: 'unit',
       linkText: 'unit',
-      link: '/unit',
+      link: 'unit',
       icon: 'layers',
     },
   ];
@@ -68,5 +68,6 @@ export class SettingComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');
+    this.isSetting = false;
   }
 }

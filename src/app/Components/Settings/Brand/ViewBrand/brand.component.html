@@ -1,14 +1,5 @@
-<div class="backBtn"></div>
-
-<div class="links">
-  <!-- <button
-    class="linkBtn"
-    mat-raised-button
-    color="accent"
-    routerLink="/setting"
-  >
-    Back
-  </button> -->
+<div class="links" (click)="onSetting()">
+  <button class="linkBtn" mat-raised-button color="accent">Back</button>
 
   <button mat-raised-button color="accent" (click)="openAddBrand()">
     {{ btnLinkText }}

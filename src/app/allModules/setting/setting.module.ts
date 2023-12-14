@@ -25,15 +25,12 @@ const settingRoute: Routes = [
   {
     path: '',
     component: SettingComponent,
-    children: [
-      { path: 'brand', component: BrandComponent },
-      { path: 'card', component: CardComponent },
-      { path: 'view-setting', component: ViewSettingComponent },
-      { path: '', redirectTo: 'setting', pathMatch: 'full' },
-    ],
   },
-];
 
+  { path: 'brand', component: BrandComponent },
+  { path: 'card', component: CardComponent },
+  { path: 'view-setting', component: ViewSettingComponent },
+];
 @NgModule({
   declarations: [
     RewardPointComponent,

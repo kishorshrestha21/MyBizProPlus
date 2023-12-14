@@ -1,20 +1,6 @@
-<div class="backLinks" (click)="onBack()">
-  <button
-    class="linkBtn"
-    mat-raised-button
-    color="accent"
-    routerLink="/setting"
-  >
-    Back
-  </button>
-</div>
 <div class="settingWrap" *ngIf="isSetting">
   <div *ngFor="let setting of settingLists">
-    <div
-      class="settingList"
-      routerLink="{{ setting.link }}"
-      (click)="onSeting()"
-    >
+    <div class="settingList" routerLink="{{ setting.link }}">
       <div class="settingContent">
         <mat-icon>{{ setting.icon }}</mat-icon
         ><br />

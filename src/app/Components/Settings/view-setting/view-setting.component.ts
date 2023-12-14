@@ -52,6 +52,12 @@ export class ViewSettingComponent implements OnInit, OnDestroy {
       link: '/unit',
       icon: 'layers',
     },
+    {
+      name: 'view setting',
+      linkText: 'view setting',
+      link: 'view-setting',
+      icon: 'label',
+    },
   ];
 
   ngOnInit(): void {
