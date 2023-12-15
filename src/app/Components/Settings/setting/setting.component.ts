@@ -60,6 +60,13 @@ export class SettingComponent implements OnInit, OnDestroy {
       link: 'unit',
       icon: 'layers',
     },
+
+    {
+      name: 'vender',
+      linkText: 'vender',
+      link: 'vender',
+      icon: 'shopping_basket',
+    },
   ];
 
   ngOnInit(): void {

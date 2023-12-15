@@ -29,7 +29,15 @@ const settingRoute: Routes = [
 
   { path: 'brand', component: BrandComponent },
   { path: 'card', component: CardComponent },
+  { path: 'size', component: SizeComponent },
+  { path: 'reward', component: RewardComponent },
+  { path: 'passcode', component: PassCodeComponent },
+  { path: 'size', component: SizeComponent },
+  { path: 'tax', component: TaxComponent },
+  { path: 'unit', component: UnitComponent },
+  { path: 'vender', component: ViewVendorComponent },
   { path: 'view-setting', component: ViewSettingComponent },
+  { path: '', redirectTo: 'setting', pathMatch: 'full' },
 ];
 @NgModule({
   declarations: [

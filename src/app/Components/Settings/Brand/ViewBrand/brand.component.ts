@@ -74,9 +74,9 @@ export class BrandComponent implements AfterViewInit, OnInit, OnDestroy {
     console.log('Editing brand with data:', data);
   }
 
-  onSetting() {
-    this._router.navigate(['setting']);
-  }
+  // onSetting() {
+  //   this._router.navigate(['setting']);
+  // }
 
   ngOnDestroy(): void {
     this._headerService.headerTitle.next('');
