@@ -1,15 +1,54 @@
 <div class="links">
   <div class="linkBtn">
-    <button mat-raised-button color="accent" routerLink="add-purchase">
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="add-purchase"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       Add Purchaser Order
     </button>
-    <button mat-raised-button color="accent">Purchase Return</button>
-    <button mat-raised-button color="accent">Receive Purchase</button>
-    <button mat-raised-button color="accent" routerLink="view-purchase">
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="purchse-return"
+      routerLinkActive="active-link"
+    >
+      Purchase Return
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="recive-purchase"
+      routerLinkActive="active-link"
+    >
+      Receive Purchase
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="view-purchase"
+      routerLinkActive="active-link"
+    >
       View Purchase
     </button>
-    <button mat-raised-button color="accent">View Purchase Order</button>
-    <button mat-raised-button color="accent">View Purchase Return</button>
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="view-puchase-order"
+      routerLinkActive="active-link"
+    >
+      View Purchase Order
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      routerLink="view-purchase-return"
+      routerLinkActive="active-link"
+    >
+      View Purchase Return
+    </button>
   </div>
 </div>
 
